@@ -4,3 +4,14 @@ __pycache__/
 .pytest_cache/
 *.pdf
 *.json
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+*.zip
+*.png
+*.jpg
+*.jpeg
+*.gif
