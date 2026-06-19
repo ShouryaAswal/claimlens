@@ -1,0 +1,17 @@
+# --- Sprint 0 / Sprint 1 (in use today) ---
+pydantic>=2.0
+pymupdf
+reportlab
+pytest
+
+# --- Sprint 2 (local LLM extraction) ---
+# ollama          # pip client for a locally running Ollama server
+# httpx
+
+# --- Sprint 3/4 (provenance crops + UI) ---
+# pillow          # for cropping bbox regions out of rendered pages
+# streamlit
+
+# --- Optional: scanned-document OCR path (not wired up yet) ---
+# paddleocr
+# paddlepaddle
