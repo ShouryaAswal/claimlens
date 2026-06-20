@@ -1,0 +1,61 @@
+{
+  "lob": "health",
+  "source_concept": "Field concepts inspired by CMS-1500 (professional claims) and UB-04 (institutional claims) -- NOT ACORD. ACORD is a P&C standard (Auto/Property); standard health claims use NUCC/NUBC-governed forms instead. Our own field names/JSON structure, not a reproduction of either form.",
+  "mandatory_doc_types": ["pre_authorization", "discharge_summary", "itemized_bill"],
+  "sections": [
+    {
+      "section_id": "patient_member_info",
+      "fields": [
+        {"field_id": "patient_name", "label": "Patient Name", "required": true, "field_type": "text", "synonyms": ["insured name"]},
+        {"field_id": "member_id", "label": "Member / Subscriber ID", "required": true, "field_type": "text", "synonyms": ["insurance id", "policy id"]},
+        {"field_id": "date_of_birth", "label": "Date of Birth", "required": false, "field_type": "date", "synonyms": ["dob"]},
+        {"field_id": "relationship_to_subscriber", "label": "Relationship to Subscriber", "required": false, "field_type": "text", "synonyms": ["self, spouse, child"]}
+      ]
+    },
+    {
+      "section_id": "provider_info",
+      "fields": [
+        {"field_id": "provider_name", "label": "Provider / Facility Name", "required": true, "field_type": "text", "synonyms": ["hospital name", "physician name"]},
+        {"field_id": "provider_npi", "label": "Provider NPI", "required": false, "field_type": "text", "synonyms": ["national provider identifier"]},
+        {"field_id": "network_status", "label": "In-Network / Out-of-Network", "required": false, "field_type": "text", "synonyms": ["network status"]}
+      ]
+    },
+    {
+      "section_id": "service_info",
+      "fields": [
+        {"field_id": "admission_date", "label": "Admission Date", "required": true, "field_type": "date", "synonyms": ["date of admission"]},
+        {"field_id": "discharge_date", "label": "Discharge Date", "required": false, "field_type": "date", "synonyms": ["date of discharge"]},
+        {"field_id": "date_of_service", "label": "Date(s) of Service", "required": false, "field_type": "date", "synonyms": ["service date"]}
+      ]
+    },
+    {
+      "section_id": "diagnosis_procedure",
+      "fields": [
+        {"field_id": "icd10_codes", "label": "ICD-10 Diagnosis Code(s)", "required": true, "field_type": "code", "synonyms": ["diagnosis code"]},
+        {"field_id": "cpt_codes", "label": "CPT / Procedure Code(s)", "required": false, "field_type": "code", "synonyms": ["procedure code"]},
+        {"field_id": "diagnosis_description", "label": "Diagnosis Description", "required": false, "field_type": "text", "synonyms": ["condition", "diagnosis"]}
+      ]
+    },
+    {
+      "section_id": "official_records",
+      "fields": [
+        {"field_id": "pre_authorization_number", "label": "Pre-Authorization Number", "required": false, "field_type": "text", "synonyms": ["pre-auth number"]},
+        {"field_id": "discharge_summary_reference", "label": "Discharge Summary Reference", "required": false, "field_type": "text", "synonyms": ["discharge note"]}
+      ]
+    },
+    {
+      "section_id": "financials",
+      "fields": [
+        {"field_id": "billed_amount", "label": "Total Billed Amount", "required": true, "field_type": "number", "synonyms": ["itemized bill total"]},
+        {"field_id": "co_pay_amount", "label": "Co-Pay Amount", "required": false, "field_type": "number", "synonyms": ["co-pay"]},
+        {"field_id": "allowed_amount", "label": "Allowed / Approved Amount", "required": false, "field_type": "number", "synonyms": ["allowed charges"]}
+      ]
+    },
+    {
+      "section_id": "remarks_overflow",
+      "fields": [
+        {"field_id": "additional_remarks", "label": "Additional Remarks", "required": false, "field_type": "text", "synonyms": ["remarks", "notes"]}
+      ]
+    }
+  ]
+}

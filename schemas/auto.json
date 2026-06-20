@@ -1,0 +1,69 @@
+{
+  "lob": "auto",
+  "source_concept": "Field concepts inspired by ACORD 2 (Automobile Loss Notice). Our own field names/JSON structure -- not a reproduction of the ACORD form template, layout, or legal text.",
+  "mandatory_doc_types": ["police_report", "photos", "repair_estimate", "policy_declaration"],
+  "sections": [
+    {
+      "section_id": "policy_info",
+      "fields": [
+        {"field_id": "policy_number", "label": "Policy Number", "required": true, "field_type": "text", "synonyms": ["policy no", "policy #"]},
+        {"field_id": "carrier_name", "label": "Carrier / NAIC Code", "required": false, "field_type": "text", "synonyms": ["insurer", "naic code"]},
+        {"field_id": "policy_effective_dates", "label": "Policy Period", "required": true, "field_type": "text", "synonyms": ["policy term", "effective date"]}
+      ]
+    },
+    {
+      "section_id": "loss_details",
+      "fields": [
+        {"field_id": "date_of_loss", "label": "Date of Loss", "required": true, "field_type": "date", "synonyms": ["accident date", "date of accident"]},
+        {"field_id": "time_of_loss", "label": "Time of Loss", "required": false, "field_type": "text", "synonyms": ["accident time"]},
+        {"field_id": "loss_location", "label": "Location of Loss", "required": true, "field_type": "text", "synonyms": ["accident location", "where did the accident occur"]},
+        {"field_id": "loss_description", "label": "Description of Accident", "required": true, "field_type": "text", "synonyms": ["narrative", "what happened", "circumstances"]}
+      ]
+    },
+    {
+      "section_id": "insured_vehicle",
+      "fields": [
+        {"field_id": "vehicle_vin", "label": "VIN", "required": true, "field_type": "text", "synonyms": ["vehicle identification number"]},
+        {"field_id": "vehicle_make_model_year", "label": "Make / Model / Year", "required": true, "field_type": "text", "synonyms": ["vehicle description"]},
+        {"field_id": "damage_location", "label": "Where Damage Can Be Seen", "required": false, "field_type": "text", "synonyms": ["point of impact", "damage area"]}
+      ]
+    },
+    {
+      "section_id": "parties",
+      "fields": [
+        {"field_id": "driver_name", "label": "Driver Name", "required": true, "field_type": "text", "synonyms": ["insured driver"]},
+        {"field_id": "driver_license_number", "label": "Driver License Number", "required": false, "field_type": "text", "synonyms": ["license no"]},
+        {"field_id": "other_party_name", "label": "Other Party / Driver Name", "required": false, "field_type": "text", "synonyms": ["third party", "other driver"]},
+        {"field_id": "other_vehicle_plate", "label": "Other Vehicle Plate", "required": false, "field_type": "text", "synonyms": ["license plate"]},
+        {"field_id": "witness_name", "label": "Witness Name", "required": false, "field_type": "text", "synonyms": ["witness"]}
+      ]
+    },
+    {
+      "section_id": "official_records",
+      "fields": [
+        {"field_id": "police_report_number", "label": "Police Report Number", "required": false, "field_type": "text", "synonyms": ["case number", "report number"]},
+        {"field_id": "reporting_department", "label": "Reporting Police Department", "required": false, "field_type": "text", "synonyms": ["police department"]}
+      ]
+    },
+    {
+      "section_id": "injury",
+      "fields": [
+        {"field_id": "injuries_reported", "label": "Injuries Reported", "required": false, "field_type": "boolean", "synonyms": ["bodily injury", "any injuries"]},
+        {"field_id": "injury_description", "label": "Injury Description", "required": false, "field_type": "text", "synonyms": ["nature of injury"]}
+      ]
+    },
+    {
+      "section_id": "financials",
+      "fields": [
+        {"field_id": "repair_estimate_amount", "label": "Repair Estimate", "required": true, "field_type": "number", "synonyms": ["estimated repair cost", "estimate amount"]},
+        {"field_id": "rental_needed", "label": "Rental Vehicle Needed", "required": false, "field_type": "boolean", "synonyms": ["rental car"]}
+      ]
+    },
+    {
+      "section_id": "remarks_overflow",
+      "fields": [
+        {"field_id": "additional_remarks", "label": "Additional Remarks", "required": false, "field_type": "text", "synonyms": ["remarks", "notes"]}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "lob": "property",
+  "source_concept": "Field concepts inspired by ACORD 1 (Property Loss Notice). Our own field names/JSON structure -- not a reproduction of the ACORD form template, layout, or legal text.",
+  "mandatory_doc_types": ["inspection_report", "inventory_list", "receipts", "policy_declaration"],
+  "sections": [
+    {
+      "section_id": "policy_info",
+      "fields": [
+        {"field_id": "policy_number", "label": "Policy Number", "required": true, "field_type": "text", "synonyms": ["policy no"]},
+        {"field_id": "carrier_name", "label": "Carrier / NAIC Code", "required": false, "field_type": "text", "synonyms": ["insurer"]},
+        {"field_id": "policy_effective_dates", "label": "Policy Period", "required": true, "field_type": "text", "synonyms": ["policy term"]}
+      ]
+    },
+    {
+      "section_id": "loss_details",
+      "fields": [
+        {"field_id": "date_of_loss", "label": "Date of Loss", "required": true, "field_type": "date", "synonyms": ["loss date"]},
+        {"field_id": "cause_of_loss", "label": "Cause of Loss", "required": true, "field_type": "text", "synonyms": ["peril", "cause of damage", "fire/wind/water/theft"]},
+        {"field_id": "loss_description", "label": "Description of Loss and Damage", "required": true, "field_type": "text", "synonyms": ["narrative", "what happened"]}
+      ]
+    },
+    {
+      "section_id": "property_info",
+      "fields": [
+        {"field_id": "property_address", "label": "Insured Location Address", "required": true, "field_type": "text", "synonyms": ["property location", "insured address"]},
+        {"field_id": "property_type", "label": "Property Type", "required": false, "field_type": "text", "synonyms": ["homeowners, dwelling, inland marine, commercial property"]},
+        {"field_id": "occupancy_status", "label": "Occupancy Status", "required": false, "field_type": "text", "synonyms": ["owner-occupied, tenant, vacant"]}
+      ]
+    },
+    {
+      "section_id": "damage_inventory",
+      "fields": [
+        {"field_id": "damaged_items_list", "label": "Damaged Items", "required": true, "field_type": "text", "synonyms": ["inventory of loss", "items damaged"]},
+        {"field_id": "inventory_reference", "label": "Inventory / Receipt Reference", "required": false, "field_type": "text", "synonyms": ["receipt number"]}
+      ]
+    },
+    {
+      "section_id": "official_records",
+      "fields": [
+        {"field_id": "inspection_report_reference", "label": "Inspection Report Reference", "required": false, "field_type": "text", "synonyms": ["adjuster inspection"]},
+        {"field_id": "fire_department_report_number", "label": "Fire / Official Report Number", "required": false, "field_type": "text", "synonyms": ["incident report number"]}
+      ]
+    },
+    {
+      "section_id": "financials",
+      "fields": [
+        {"field_id": "probable_amount_of_loss", "label": "Probable Amount of Entire Loss", "required": true, "field_type": "number", "synonyms": ["estimated loss amount"]},
+        {"field_id": "replacement_cost_estimate", "label": "Replacement Cost Estimate (RCV)", "required": false, "field_type": "number", "synonyms": ["rcv"]},
+        {"field_id": "actual_cash_value_estimate", "label": "Actual Cash Value Estimate (ACV)", "required": false, "field_type": "number", "synonyms": ["acv", "depreciated value"]},
+        {"field_id": "deductible_amount", "label": "Deductible", "required": false, "field_type": "number", "synonyms": ["deductible"]}
+      ]
+    },
+    {
+      "section_id": "remarks_overflow",
+      "fields": [
+        {"field_id": "additional_remarks", "label": "Additional Remarks", "required": false, "field_type": "text", "synonyms": ["remarks", "notes"]}
+      ]
+    }
+  ]
+}

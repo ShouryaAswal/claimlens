@@ -1,53 +1,64 @@
 """
-Static configuration for ClaimLens.
-
-Centralising this here means Sprint 2 (LLM extraction) and Sprint 4
-(triage) just import these instead of hard-coding strings everywhere.
+core/config.py
+----------------
+Shared constants. Centralized so Sprint 1's ingestion code and later sprints'
+extraction/triage code don't each hardcode their own copies.
 """
 
-# Confidence below this -> flagged for human review (matches the
-# enterprise design doc's "Confidence-Based Routing" rule).
-CONFIDENCE_THRESHOLD = 0.7
+from pathlib import Path
 
-# Per-claim-type field schema. Sprint 2's LLM Extraction Agent will be
-# prompted with exactly these field names + descriptions.
-CLAIM_FIELD_SCHEMAS = {
-    "auto": {
-        "policy_number": "Policy ID for the auto policy",
-        "claimant_name": "Full legal name of the driver/claimant",
-        "loss_date": "Date of the accident",
-        "claim_amount": "Total repair/rental estimate amount, in USD",
-        "vehicle_vin": "Vehicle Identification Number",
-    },
-    "property": {
-        "policy_number": "Policy ID for the property policy",
-        "policyholder_name": "Full legal name of the policyholder",
-        "loss_date": "Date of loss / damage",
-        "claim_amount": "Replacement cost or ACV claimed, in USD",
-        "property_address": "Address of the damaged property",
-    },
-    "health": {
-        "policy_number": "Member / policy ID",
-        "patient_name": "Full legal name of the patient",
-        "admission_date": "Date of hospital admission",
-        "claim_amount": "Total billed amount, in USD",
-        "provider_name": "Name of the treating hospital / provider",
-    },
+# --- Paths -------------------------------------------------------------
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+SCHEMAS_DIR = PROJECT_ROOT / "schemas"
+SAMPLES_DIR = PROJECT_ROOT / "samples"
+OUTPUTS_DIR = PROJECT_ROOT / "outputs"
+
+# --- Ingestion -----------------------------------------------------------
+SUPPORTED_FILE_EXTENSIONS = {
+    ".pdf": "pdf",
+    ".docx": "docx",
+    ".pptx": "pptx",
+    ".png": "image",
+    ".jpg": "image",
+    ".jpeg": "image",
+    ".tif": "image",
+    ".tiff": "image",
+    ".bmp": "image",
 }
 
-# Sprint 4 rule-based triage weights (slide "Triage Logic for MVP")
-TRIAGE_RULES = {
-    "missing_required_field": 25,
-    "field_has_no_evidence": 20,
-    "low_confidence": 15,
-    "claim_amount_above_threshold": 15,
-    "document_type_unknown": 20,
+# Content-Type -> file extension, used when ingesting a hyperlink so we know
+# which parser to route the downloaded bytes to.
+CONTENT_TYPE_TO_EXTENSION = {
+    "application/pdf": ".pdf",
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document": ".docx",
+    "application/vnd.openxmlformats-officedocument.presentationml.presentation": ".pptx",
+    "image/png": ".png",
+    "image/jpeg": ".jpg",
+    "image/tiff": ".tiff",
+    "image/bmp": ".bmp",
 }
 
-CLAIM_AMOUNT_HIGH_RISK_THRESHOLD = 25000  # USD
+# A PDF page is treated as "scanned" (and routed to OCR) if PyMuPDF's native
+# text layer yields fewer than this many non-whitespace characters.
+PDF_PAGE_OCR_FALLBACK_CHAR_THRESHOLD = 15
 
-TRIAGE_ROUTES = {
-    (0, 25): "STP Candidate",
-    (26, 60): "Needs Human Review",
-    (61, 10_000): "Incomplete / High Risk",
-}
+# DPI used when rasterizing a scanned PDF page for OCR. Higher = more
+# accurate OCR, slower processing. 200-300 is the usual production sweet spot.
+PDF_OCR_RENDER_DPI = 250
+
+# Tesseract language code(s). Swap/extend for multilingual claims
+# (e.g. "eng+vie" for English + Vietnamese) once language packs are
+# installed (`apt-get install tesseract-ocr-<lang>`).
+DEFAULT_OCR_LANGUAGE = "eng"
+
+# Long-document guardrail: log a warning (not an error) above this page count
+# so processing time is visible rather than silent. The manager's "20-25
+# pages" requirement is the expected case, not the ceiling.
+LONG_DOCUMENT_PAGE_WARNING_THRESHOLD = 20
+
+# HTTP request timeout (seconds) for hyperlink ingestion.
+URL_FETCH_TIMEOUT_SECONDS = 20
+
+# Max bytes to download for a single hyperlink target (10 MB) — a sane guard
+# against accidentally trying to OCR a 2 GB video someone linked by mistake.
+URL_FETCH_MAX_BYTES = 10 * 1024 * 1024

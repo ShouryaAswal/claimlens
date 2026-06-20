@@ -1,105 +1,183 @@
 """
-ClaimLens core schemas.
+core/schemas.py
+----------------
+Pydantic v2 data models shared across every agent in the ClaimLens pipeline.
 
-These are the shared data contracts every agent reads/writes.
-Keeping them in one place means every agent in agents/ speaks the
-same language and we can validate at every hand-off (OCR -> chunking
--> LLM extraction -> provenance -> verifier -> triage).
+Design notes (Sprint 0):
+- `ContentBlock` is the universal unit of evidence. Every ingestion parser
+  (PDF, DOCX, PPTX, image, HTML) emits a list of these, regardless of source
+  format. This is what later sprints cite for provenance — block_id is the
+  ONLY thing an LLM is ever allowed to reference; bbox/page are filled in
+  deterministically by the parser, never by a model.
+- Not every format has a pixel-accurate bounding box (a flowing .docx
+  paragraph doesn't live at a fixed (x, y) the way a PDF block or a PPTX
+  shape does). `bbox` and `page` are therefore Optional — provenance
+  degrades gracefully to `locator` (a human-readable position string) rather
+  than silently inventing a coordinate.
+- `LOBSchema` / `SectionDefinition` / `FieldDefinition` model the
+  ACORD-inspired (Auto/Property) and CMS-1500/UB-04-inspired (Health) field
+  schemas defined in schemas/*.json. This is the "Schema Resolution" layer
+  that was missing from the v1 design.
+- `ClaimState` is the single object that flows through the whole pipeline,
+  growing as later sprints (classification, extraction, triage) attach more
+  data to it. Sprint 0/1 only populate `documents`.
 """
 
 from __future__ import annotations
 
-from datetime import datetime
-from typing import Dict, List, Optional, Tuple
+from datetime import datetime, timezone
+from enum import Enum
+from typing import Any, Literal, Optional
 
 from pydantic import BaseModel, Field, field_validator
 
 
-class OCRBlock(BaseModel):
-    """A single text region detected on a page.
+# ---------------------------------------------------------------------------
+# Enums
+# ---------------------------------------------------------------------------
 
-    OCR (or, for digital PDFs, direct text extraction) OWNS coordinates.
-    Nothing downstream is allowed to invent a bbox -- they can only
-    reference an existing block_id.
-    """
+class SourceFormat(str, Enum):
+    PDF = "pdf"
+    DOCX = "docx"
+    PPTX = "pptx"
+    IMAGE = "image"
+    HTML = "html"
 
-    block_id: str  # e.g. "p1_b007"
-    page: int
-    text: str
-    bbox: Tuple[float, float, float, float]  # x1, y1, x2, y2 in PDF points
-    ocr_confidence: float = Field(ge=0.0, le=1.0)
+
+class LOB(str, Enum):
+    AUTO = "auto"
+    PROPERTY = "property"
+    HEALTH = "health"
+    UNKNOWN = "unknown"
+
+
+# ---------------------------------------------------------------------------
+# Ingestion-layer models (Sprint 1)
+# ---------------------------------------------------------------------------
+
+class ContentBlock(BaseModel):
+    """The universal unit of evidence. One per OCR block / PDF text block /
+    DOCX paragraph / PPTX shape / HTML element / OCR line."""
+
+    block_id: str
     source_file: str
+    source_format: SourceFormat
+    page: Optional[int] = None                      # 1-indexed; None if not paginated
+    locator: str                                     # e.g. "page_2_block_5", "paragraph_12",
+                                                       # "slide_3_shape_1", "html_p_4"
+    text: str
+    bbox: Optional[tuple[float, float, float, float]] = None  # (x0, y0, x1, y1) in points
+    confidence: float = Field(default=1.0, ge=0.0, le=1.0)
+    extraction_method: str                            # "pymupdf_text" | "pytesseract_ocr" |
+                                                       # "docx_paragraph" | "docx_table_row" |
+                                                       # "pptx_shape_text" | "html_text_element"
+    extra: dict[str, Any] = Field(default_factory=dict)
 
-    @field_validator("bbox")
+    @field_validator("text")
     @classmethod
-    def _bbox_is_valid_box(cls, v):
-        x1, y1, x2, y2 = v
-        if x2 < x1 or y2 < y1:
-            raise ValueError(f"Invalid bbox, x2/y2 must be >= x1/y1: {v}")
+    def _non_empty_text(cls, v: str) -> str:
+        if not v or not v.strip():
+            raise ValueError("ContentBlock.text must not be empty")
         return v
 
 
-class ExtractedField(BaseModel):
-    """One field produced by the LLM Extraction Agent (Sprint 2)."""
+class DocumentRecord(BaseModel):
+    """One ingested file (or one fetched URL), with all of its blocks."""
 
+    doc_id: str
+    source_file: str
+    source_format: SourceFormat
+    page_count: Optional[int] = None
+    doc_type: Optional[str] = None        # set later by the doc-type tagger agent
+    blocks: list[ContentBlock] = Field(default_factory=list)
+    warnings: list[str] = Field(default_factory=list)
+    ingested_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @property
+    def full_text(self) -> str:
+        return "\n".join(b.text for b in self.blocks)
+
+    @property
+    def block_count(self) -> int:
+        return len(self.blocks)
+
+
+# ---------------------------------------------------------------------------
+# Schema Resolution layer models (Sprint 0 — the new ACORD/CMS-1500 mapping)
+# ---------------------------------------------------------------------------
+
+class FieldDefinition(BaseModel):
+    field_id: str
+    label: str
+    required: bool = False
+    field_type: Literal["text", "date", "number", "boolean", "code"] = "text"
+    description: Optional[str] = None
+    synonyms: list[str] = Field(default_factory=list)  # helps section-extraction prompts
+
+
+class SectionDefinition(BaseModel):
+    section_id: str
+    fields: list[FieldDefinition]
+
+    @property
+    def required_fields(self) -> list[FieldDefinition]:
+        return [f for f in self.fields if f.required]
+
+
+class LOBSchema(BaseModel):
+    lob: LOB
+    source_concept: str          # honesty marker: which real-world form this is inspired by
+    mandatory_doc_types: list[str]
+    sections: list[SectionDefinition]
+
+    @property
+    def all_fields(self) -> list[FieldDefinition]:
+        return [f for s in self.sections for f in s.fields]
+
+    @property
+    def required_fields(self) -> list[FieldDefinition]:
+        return [f for f in self.all_fields if f.required]
+
+    def get_section(self, section_id: str) -> Optional[SectionDefinition]:
+        return next((s for s in self.sections if s.section_id == section_id), None)
+
+
+# ---------------------------------------------------------------------------
+# Claim-level state (grows in later sprints — extraction/triage/summary)
+# ---------------------------------------------------------------------------
+
+class ExtractedField(BaseModel):
+    """Populated in Sprint 2+. Scaffolded now so ClaimState has a stable shape."""
+
+    field_id: str
     value: Optional[str] = None
     confidence: float = Field(default=0.0, ge=0.0, le=1.0)
-    evidence_block_ids: List[str] = Field(default_factory=list)
+    evidence_block_ids: list[str] = Field(default_factory=list)
+    status: Literal["found", "missing", "low_confidence", "conflicting"] = "missing"
     reason: Optional[str] = None
 
 
-class ProvenanceRecord(BaseModel):
-    """Field -> exact source location, produced by the Provenance Agent
-    (Sprint 3) by resolving evidence_block_ids against ocr_blocks."""
-
-    field: str
-    value: Optional[str]
-    source_file: str
-    page: int
-    bbox: Tuple[float, float, float, float]
-    snippet: str
-    crop_path: Optional[str] = None
-    confidence: float
-
-
-class VerificationFlag(BaseModel):
-    field: str
-    status: str  # "verified" | "low_confidence" | "missing" | "unsupported"
-    detail: Optional[str] = None
-
-
 class ClaimState(BaseModel):
-    """The single shared object that flows through every agent in the
-    pipeline. Each agent reads what it needs and appends its own output;
-    nothing is mutated destructively, so we always retain a full audit
-    trail of what happened at each stage."""
+    """The single object that flows through ingestion -> classification ->
+    schema resolution -> extraction -> triage -> reviewer summary."""
 
     claim_id: str
-    claim_type: str  # "auto" | "property" | "health"
-    source_files: List[str] = Field(default_factory=list)
+    lob: Optional[LOB] = None
+    lob_confidence: Optional[float] = None
+    documents: list[DocumentRecord] = Field(default_factory=list)
+    lob_schema: Optional[LOBSchema] = None
+    extracted_fields: dict[str, ExtractedField] = Field(default_factory=dict)
+    missing_mandatory_docs: list[str] = Field(default_factory=list)
+    triage: Optional[dict[str, Any]] = None
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
-    # Sprint 1 output
-    ocr_blocks: List[OCRBlock] = Field(default_factory=list)
+    @property
+    def all_blocks(self) -> list[ContentBlock]:
+        return [b for d in self.documents for b in d.blocks]
 
-    # Sprint 2 output
-    extracted_fields: Dict[str, ExtractedField] = Field(default_factory=dict)
+    @property
+    def total_page_count(self) -> int:
+        return sum(d.page_count or 0 for d in self.documents)
 
-    # Sprint 3 output
-    provenance: Dict[str, ProvenanceRecord] = Field(default_factory=dict)
-    verification: List[VerificationFlag] = Field(default_factory=list)
-
-    # Sprint 4 output
-    triage_score: Optional[int] = None
-    triage_route: Optional[str] = None
-    reviewer_summary: Optional[str] = None
-
-    created_at: datetime = Field(default_factory=datetime.utcnow)
-
-    def blocks_for_page(self, page: int) -> List[OCRBlock]:
-        return [b for b in self.ocr_blocks if b.page == page]
-
-    def block_by_id(self, block_id: str) -> Optional[OCRBlock]:
-        for b in self.ocr_blocks:
-            if b.block_id == block_id:
-                return b
-        return None
+    def get_block(self, block_id: str) -> Optional[ContentBlock]:
+        return next((b for b in self.all_blocks if b.block_id == block_id), None)
