@@ -21,6 +21,7 @@ from __future__ import annotations
 import logging
 import os
 import tempfile
+from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
@@ -82,6 +83,20 @@ def ingest_url(url: str) -> tuple[list[ContentBlock], int | None, list[str]]:
     blocks = _parse_html(resp.text, source_file=url)
     if not blocks:
         warnings.append(f"No extractable text found at {url!r} (HTML, but no matching elements).")
+    return blocks, None, warnings
+
+
+def parse_html_file(path: str, source_file: str | None = None) -> tuple[list[ContentBlock], None, list[str]]:
+    """Local .html/.htm file -- e.g. a saved email or web page printout
+    dropped into a claim folder. Reuses the same extraction logic as
+    fetched-URL HTML, since the provenance story is identical (no fixed
+    visual page, locator-only)."""
+    source_file = source_file or str(path)
+    html = Path(path).read_text(encoding="utf-8", errors="replace")
+    blocks = _parse_html(html, source_file=source_file)
+    warnings: list[str] = []
+    if not blocks:
+        warnings.append(f"No extractable text found in {source_file!r} (HTML, but no matching elements).")
     return blocks, None, warnings
 
 

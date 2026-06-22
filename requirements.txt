@@ -22,3 +22,27 @@ pytest>=8.0
 # Add language packs for multilingual claims, e.g.:
 #   sudo apt-get install tesseract-ocr-vie tesseract-ocr-deu
 # -----------------------------------------------------------------------
+
+# -----------------------------------------------------------------------
+# Added for: real-world/realistic test data generation (this round)
+# -----------------------------------------------------------------------
+augraphy>=8.2          # realistic document scan degradation (noise, folding,
+                         # ink bleed, lighting gradients) -- see
+                         # samples/real_world/REAL_DATA_SOURCES.md
+
+# -----------------------------------------------------------------------
+# Added for: PaddleOCR engine (optional -- Tesseract remains the default
+# and requires none of this). See PADDLEOCR_SETUP.md before installing.
+# -----------------------------------------------------------------------
+# paddlepaddle>=3.0
+# paddleocr>=3.0
+
+# -----------------------------------------------------------------------
+# Added for: Sprint 2 LLM-backed agents (optional -- the LOB classifier and
+# doc-type tagger work with NEITHER of these installed, via their
+# rule-based fallback. Only needed for: (a) the LLM-backed classification
+# path, or (b) section_extraction_agent.py, which has no offline fallback.
+# See SPRINT_2_NOTES.md.
+# -----------------------------------------------------------------------
+# openai>=1.0           # Groq is accessed via its OpenAI-compatible endpoint
+# google-genai>=0.3     # for Gemini-backed section extraction

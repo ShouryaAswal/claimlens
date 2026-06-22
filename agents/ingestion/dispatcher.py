@@ -27,6 +27,7 @@ _FORMAT_ENUM_BY_KEY = {
     "docx": SourceFormat.DOCX,
     "pptx": SourceFormat.PPTX,
     "image": SourceFormat.IMAGE,
+    "html": SourceFormat.HTML,
 }
 
 
@@ -74,6 +75,8 @@ def ingest(source: str, doc_id: str | None = None) -> DocumentRecord:
         blocks, page_count, warnings = office_parser.parse_pptx(str(path), source_file=str(path))
     elif format_key == "image":
         blocks, page_count, warnings = image_parser.parse_image(str(path), source_file=str(path))
+    elif format_key == "html":
+        blocks, page_count, warnings = url_parser.parse_html_file(str(path), source_file=str(path))
     else:  # pragma: no cover - guarded by SUPPORTED_FILE_EXTENSIONS above
         raise UnsupportedFormatError(f"No parser registered for format key {format_key!r}")
 
@@ -85,6 +88,62 @@ def ingest(source: str, doc_id: str | None = None) -> DocumentRecord:
         blocks=blocks,
         warnings=warnings,
     )
+
+
+def discover_files(directory: str, link_manifest_name: str = "claim_links.txt") -> list[str]:
+    """Recursively walk a directory (a real claim packet rarely arrives as
+    one flat folder -- expect fnol/, evidence/, correspondence/
+    subdirectories, mixed formats throughout) and return every file path
+    with a supported extension, plus any URLs listed in a manifest file
+    (default name 'claim_links.txt', one URL per line, '#' for comments) --
+    so a claim folder can reference documents that live elsewhere (a
+    carrier portal, cloud storage) without downloading them ahead of time.
+
+    Returns a flat list of strings ready to pass straight to ingest_many():
+    local paths and/or http(s):// URLs, in deterministic (sorted) order.
+    """
+    root = Path(directory)
+    if not root.exists():
+        raise FileNotFoundError(f"No such directory: {directory}")
+    if not root.is_dir():
+        raise NotADirectoryError(f"Not a directory: {directory}")
+
+    sources: list[str] = []
+    for path in sorted(root.rglob("*")):
+        if not path.is_file():
+            continue
+        if path.name == link_manifest_name:
+            sources.extend(_read_link_manifest(path))
+            continue
+        if path.suffix.lower() in SUPPORTED_FILE_EXTENSIONS:
+            sources.append(str(path))
+        else:
+            logger.debug("Skipping unsupported file during discovery: %s", path)
+    return sources
+
+
+def _read_link_manifest(path: Path) -> list[str]:
+    urls: list[str] = []
+    for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line.lower().startswith(("http://", "https://")):
+            urls.append(line)
+        else:
+            logger.warning("Ignoring non-URL line in link manifest %s: %r", path, line)
+    return urls
+
+
+def ingest_claim_folder(directory: str) -> list[DocumentRecord]:
+    """Convenience wrapper: discover every supported file/link under a claim
+    folder and ingest all of them in one batch. This is the function a
+    Streamlit upload handler or batch CLI should call for 'process this
+    whole claim' rather than assembling the file list manually."""
+    sources = discover_files(directory)
+    if not sources:
+        logger.warning("No ingestible files or links found under %s", directory)
+    return ingest_many(sources)
 
 
 def ingest_many(sources: list[str]) -> list[DocumentRecord]:

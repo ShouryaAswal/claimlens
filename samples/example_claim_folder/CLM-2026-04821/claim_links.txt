@@ -1,0 +1,6 @@
+# One URL per line. Lines starting with # are ignored.
+# In a real claim, these would be portal links to documents stored
+# elsewhere (a cloud drive, a carrier portal, a repair shop's estimate
+# system) rather than local file attachments.
+# Example (not fetched by default -- see discover_files(follow_link_manifests=True)):
+# https://claims-portal.example.com/attachments/estimate_4821.pdf

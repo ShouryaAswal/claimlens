@@ -24,6 +24,8 @@ SUPPORTED_FILE_EXTENSIONS = {
     ".tif": "image",
     ".tiff": "image",
     ".bmp": "image",
+    ".html": "html",
+    ".htm": "html",
 }
 
 # Content-Type -> file extension, used when ingesting a hyperlink so we know
@@ -45,6 +47,16 @@ PDF_PAGE_OCR_FALLBACK_CHAR_THRESHOLD = 15
 # DPI used when rasterizing a scanned PDF page for OCR. Higher = more
 # accurate OCR, slower processing. 200-300 is the usual production sweet spot.
 PDF_OCR_RENDER_DPI = 250
+
+# OCR engine selection: "tesseract" (default, lightweight, no model
+# download) or "paddleocr" (heavier, generally more accurate on messy/
+# multilingual real-world scans -- see PADDLEOCR_SETUP.md). If PaddleOCR is
+# selected but unavailable (not installed, or its model download can't
+# reach a host), the pipeline automatically falls back to Tesseract and
+# logs a warning -- it never silently produces zero blocks.
+import os
+
+OCR_ENGINE = os.environ.get("CLAIMLENS_OCR_ENGINE", "tesseract").strip().lower()
 
 # Tesseract language code(s). Swap/extend for multilingual claims
 # (e.g. "eng+vie" for English + Vietnamese) once language packs are

@@ -8,13 +8,4 @@ venv/
 outputs/*.json
 !outputs/.gitkeep
 .env
-*.pdf
-*.docx
-*.xlsx
-*.pptx
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.zip
-
+augraphy_cache/
