@@ -31,6 +31,29 @@ _FORMAT_ENUM_BY_KEY = {
 }
 
 
+def _namespace_block_ids(record: DocumentRecord) -> DocumentRecord:
+    """Rewrites every block's block_id to be prefixed with this document's
+    doc_id (e.g. "img_b006" -> "doc_a3f8e91c_img_b006").
+
+    Why this exists (a real bug caught while building Sprint 3): every
+    per-format parser numbers its own blocks starting from 1 in complete
+    isolation (pdf_parser's "p1_b001", image_parser's "img_b001", etc.).
+    That's fine for a single document, but the moment a claim has TWO
+    images, they BOTH produce a block called "img_b001" -- and
+    ClaimState.get_block(block_id), which searches across every document in
+    the claim, will silently return whichever one it finds first. An
+    extraction agent citing "img_b006" from one photo could end up
+    verified against a completely different photo's "img_b006" that
+    happens to share the id. That is exactly the kind of silent
+    wrong-evidence error this round's verification work exists to prevent
+    -- so it's fixed at the one place every DocumentRecord is created,
+    rather than patched per-parser.
+    """
+    for block in record.blocks:
+        block.block_id = f"{record.doc_id}_{block.block_id}"
+    return record
+
+
 def ingest(source: str, doc_id: str | None = None) -> DocumentRecord:
     """Ingest one document, from a local file path OR an http(s) URL.
 
@@ -46,14 +69,14 @@ def ingest(source: str, doc_id: str | None = None) -> DocumentRecord:
         # Best-effort format label for a URL: infer from what the URL parser
         # actually routed to, via the blocks it produced (or default HTML).
         fmt = blocks[0].source_format if blocks else SourceFormat.HTML
-        return DocumentRecord(
+        return _namespace_block_ids(DocumentRecord(
             doc_id=doc_id,
             source_file=source,
             source_format=fmt,
             page_count=page_count,
             blocks=blocks,
             warnings=warnings,
-        )
+        ))
 
     path = Path(source)
     if not path.exists():
@@ -80,14 +103,14 @@ def ingest(source: str, doc_id: str | None = None) -> DocumentRecord:
     else:  # pragma: no cover - guarded by SUPPORTED_FILE_EXTENSIONS above
         raise UnsupportedFormatError(f"No parser registered for format key {format_key!r}")
 
-    return DocumentRecord(
+    return _namespace_block_ids(DocumentRecord(
         doc_id=doc_id,
         source_file=str(path),
         source_format=_FORMAT_ENUM_BY_KEY[format_key],
         page_count=page_count,
         blocks=blocks,
         warnings=warnings,
-    )
+    ))
 
 
 def discover_files(directory: str, link_manifest_name: str = "claim_links.txt") -> list[str]:

@@ -10,6 +10,7 @@ pytesseract>=0.3.10
 beautifulsoup4>=4.12
 lxml>=5.0
 requests>=2.31
+python-dateutil>=2.9     # robust date parsing for evidence_verifier.py's exact-date matching
 
 # testing
 pytest>=8.0

@@ -51,6 +51,74 @@ class LOB(str, Enum):
     UNKNOWN = "unknown"
 
 
+class MatchMethod(str, Enum):
+    """How a field's claimed value was checked against its cited evidence
+    text. Numeric/date/code fields use exact (zero-tolerance) matching --
+    see agents/evidence_verifier.py's module docstring for why a single
+    digit of "close enough" is not acceptable for a dollar amount or a VIN.
+    """
+
+    EXACT_NUMERIC = "exact_numeric"
+    EXACT_DATE = "exact_date"
+    EXACT_CODE = "exact_code"
+    FUZZY_TEXT = "fuzzy_text"
+    NO_EVIDENCE = "no_evidence"
+    UNPARSEABLE = "unparseable"
+
+
+class RiskLevel(str, Enum):
+    OK = "ok"
+    NEEDS_REVIEW = "needs_review"
+    HIGH_RISK = "high_risk"
+
+
+class LLMVerificationResult(BaseModel):
+    """Output of the optional LLM-based secondary check (semantic
+    cross-check on top of the deterministic fuzzy/exact match -- catches
+    things string matching can't, e.g. '5:45 PM' vs '17:45' meaning the
+    same thing, or text matching exactly but actually being contradicted by
+    context elsewhere in the same block)."""
+
+    supported: bool
+    confidence: float = Field(ge=0.0, le=1.0)
+    explanation: str
+
+
+class FieldVerification(BaseModel):
+    """The full verification + confidence-rating record for one extracted
+    field. This is the structure the future reviewer UI (Sprint 5) reads
+    from -- everything a human needs to either trust a field at a glance or
+    understand exactly why it's flagged."""
+
+    field_id: str
+    match_method: MatchMethod
+    match_score: float = Field(ge=0.0, le=1.0)
+    ocr_confidence_avg: float = Field(ge=0.0, le=1.0)
+    llm_confidence: float = Field(ge=0.0, le=1.0)
+    composite_confidence: float = Field(ge=0.0, le=1.0)
+    risk_level: RiskLevel
+    requires_human_review: bool
+    reasons: list[str] = Field(default_factory=list)
+    llm_verification: Optional[LLMVerificationResult] = None
+    crop_paths: list[str] = Field(default_factory=list)
+
+
+class ReviewQueueItem(BaseModel):
+    """One line item in the human-in-the-loop review queue -- the basis for
+    Sprint 5's reviewer UI. Self-contained: a reviewer should be able to
+    make a decision from this record plus the crop images alone, without
+    needing to dig back through the raw claim state."""
+
+    claim_id: str
+    field_id: str
+    field_label: str
+    value: Optional[str]
+    risk_level: RiskLevel
+    reasons: list[str]
+    evidence_block_ids: list[str]
+    crop_paths: list[str] = Field(default_factory=list)
+
+
 # ---------------------------------------------------------------------------
 # Ingestion-layer models (Sprint 1)
 # ---------------------------------------------------------------------------
@@ -167,6 +235,7 @@ class ClaimState(BaseModel):
     documents: list[DocumentRecord] = Field(default_factory=list)
     lob_schema: Optional[LOBSchema] = None
     extracted_fields: dict[str, ExtractedField] = Field(default_factory=dict)
+    field_verifications: dict[str, FieldVerification] = Field(default_factory=dict)
     missing_mandatory_docs: list[str] = Field(default_factory=list)
     triage: Optional[dict[str, Any]] = None
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))

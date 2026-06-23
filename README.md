@@ -1,7 +1,7 @@
 # ClaimLens v2
 
 Agentic OCR/document-understanding + LLM claims-intake MVP.
-Insurance AI Platform Internship · Sprints 0, 1 & 2 complete (19–21 Jun 2026).
+Insurance AI Platform Internship · Sprints 0, 1, 2 & 3 complete (19–27 Jun 2026).
 
 This repo accelerates **steps 2–5 of the claims lifecycle** (FNOL intake →
 basic validation → triage) and hands a structured, evidence-linked work
@@ -17,13 +17,13 @@ architecture and sprint plan.
 | **0** | Schema authoring (Auto/Property/Health field schemas), repo skeleton, Pydantic models | ✅ Done |
 | **1** | Multi-format ingestion: PDF (digital + scanned/OCR), DOCX, PPTX, images, hyperlinks, nested claim folders; long-document handling; dual OCR engines (Tesseract + PaddleOCR) | ✅ Done |
 | **2** | LOB classification, doc-type tagging, Gate Check, section-wise extraction | ✅ Done |
-| 3 | Merge agent, provenance crop rendering, evidence verifier (fuzzy text-match check) | Not started |
+| **3** | Merge agent, provenance crop rendering, evidence verifier (exact/fuzzy matching), confidence rating, optional LLM second opinion, human review queue | ✅ Done |
 | 4 | Triage agent, reviewer summary agent | Not started |
 | 5 | Streamlit frontend | Not started |
 | 6 | Testing, polish, demo | Not started |
 
-**97 tests passing.** Real-world and realistically-degraded test data added
-this round — see `samples/real_world/REAL_DATA_SOURCES.md`.
+**158 tests passing.** See `SPRINT_3_NOTES.md` for the verification/
+confidence-rating architecture and the safety properties it enforces.
 
 ## Setup
 
@@ -63,6 +63,15 @@ tag doc types → Gate Check → extraction if an LLM key is configured):
 
 ```bash
 python3 scripts/run_sprint2_demo.py
+```
+
+Run the Sprint 3 pipeline demo (adds evidence verification, confidence
+rating, crop generation, and the human review queue on top of Sprint 2 —
+without an LLM key, it plants a deliberate single-digit error to prove the
+verifier actually catches it):
+
+```bash
+python3 scripts/run_sprint3_demo.py
 ```
 
 Run the test suite:
@@ -201,6 +210,34 @@ same dependency-pinning risk flagged before. If Sprint 3+ ever needs actual
 retrieval (a vector store, a multi-step agent loop with tool-calling),
 that's a genuine case to re-evaluate, not before.
 
+## What Sprint 3 built: verification that a single digit error can't slip through
+
+The safety-critical round. Five new modules, all built around one
+non-negotiable rule, stated in full in `SPRINT_3_NOTES.md` and enforced in
+code, not just policy: **for numeric/date/code fields, an exact-match
+failure is final — no LLM agreement, no confidence score, nothing
+overrides it.**
+
+| Module | Job |
+|---|---|
+| `evidence_verifier.py` | Does the cited evidence TEXT actually contain this value? Numbers/dates/codes get exact matching (zero tolerance — `$4,250` vs `$4,259` fails even though it's 85% similar as a string); text/boolean get fuzzy matching (OCR noise on a name is forgivable) |
+| `confidence_rating.py` | Combines the match result + the cited evidence's own OCR confidence + the extraction agent's confidence + an optional LLM second opinion → one `risk_level`: `ok` / `needs_review` / `high_risk` |
+| `llm_evidence_verifier.py` | Optional semantic second opinion (catches things string-matching can't, e.g. "5:45 AM" vs "5:45 PM" — high similarity, different fact) — can *escalate* a field, can never *downgrade* a critical-field failure |
+| `provenance_agent.py` | Renders an actual crop image from a block's bbox — "every accepted field traces to a real crop," not just a citation |
+| `merge_agent.py` | When a field's multiple evidence citations (or independent extraction candidates) disagree on a critical-type value, it becomes `status: "conflicting"` — never silently resolved by majority vote or confidence |
+| `human_review_queue.py` | Flattens every flagged field into a sorted, self-contained queue (value, reasons, crop paths) — the literal handoff point for Sprint 5's reviewer UI |
+
+**A real bug this caught, not a hypothetical one:** building the Sprint 3
+demo against the actual example claim folder surfaced a genuine collision
+— two photos in the same claim both produced a block called `img_b006`
+(each format parser numbers its own blocks from 1, independently), so
+`claim.get_block()` was silently returning the wrong photo's text as
+"evidence." Fixed at the one place every `DocumentRecord` is created
+(`dispatcher.py`'s `_namespace_block_ids()`) and locked in with a
+regression test. Full writeup in `SPRINT_3_NOTES.md` — kept visible
+deliberately, since it's a good demonstration of exactly the failure mode
+this sprint's tests exist to surface.
+
 ## Repository structure
 
 ```
@@ -226,6 +263,12 @@ claimlens-agentic-mvp/
     doc_type_tagger_agent.py        # Sprint 2
     gate_check.py                    # Sprint 2 (deterministic)
     section_extraction_agent.py       # Sprint 2 (LLM-backed, no fallback)
+    evidence_verifier.py               # Sprint 3 (exact match for number/date/code, fuzzy for text)
+    confidence_rating.py                # Sprint 3 (composite risk_level, LLM-cannot-override rule)
+    llm_evidence_verifier.py             # Sprint 3 (optional semantic second opinion)
+    provenance_agent.py                   # Sprint 3 (block_id -> crop image)
+    merge_agent.py                         # Sprint 3 (multi-citation/candidate conflict resolution)
+    human_review_queue.py                   # Sprint 3 (basis for Sprint 5's reviewer UI)
     ingestion/
       base.py             # shared exceptions
       ocr_utils.py         # backward-compat shim -> ocr_engines/factory.py
@@ -239,6 +282,7 @@ claimlens-agentic-mvp/
       image_parser.py        # standalone image OCR
       url_parser.py           # hyperlink fetch + content-type routing + local/fetched HTML
       dispatcher.py            # ingest() / ingest_many() / discover_files() / ingest_claim_folder()
+                                 # + _namespace_block_ids() (global block_id uniqueness, Sprint 3 fix)
   samples/                # sample claim docs -- several tiers, see below
     *.pdf, *.docx, *.pptx, *.png   # Sprint 1: clean synthetic ("born-digital")
     real_world/
@@ -253,25 +297,29 @@ claimlens-agentic-mvp/
     generate_realistic_scans.py    # Augraphy degradation pipeline
     run_ingestion_demo.py            # ingests all flat samples
     run_sprint2_demo.py               # full Sprint 0-2 pipeline on the example claim folder
-  outputs/                # generated JSON results (gitignored except .gitkeep)
+    run_sprint3_demo.py                # adds verification/rating/crops/review-queue on top
+  outputs/                # generated JSON results + crops/ (gitignored except .gitkeep)
   tests/
     test_schemas.py              # Sprint 0
     test_ingestion.py             # Sprint 1
     test_ocr_engines.py            # Sprint 1 (PaddleOCR/Tesseract factory + fallback)
-    test_directory_discovery.py     # Sprint 1 (nested claim folders, link manifests)
+    test_directory_discovery.py     # Sprint 1 (nested claim folders, link manifests, block_id uniqueness)
     test_real_world_data.py          # Sprint 1 (regression tests against real/realistic data)
     test_lob_classifier.py            # Sprint 2
     test_doc_type_tagger.py            # Sprint 2
     test_gate_check.py                  # Sprint 2
     test_section_extraction.py           # Sprint 2
+    test_evidence_verifier.py             # Sprint 3 (the zero-tolerance critical-field tests)
+    test_confidence_rating.py              # Sprint 3 (incl. LLM-cannot-override-failure test)
+    test_provenance_agent.py                # Sprint 3
+    test_merge_agent.py                      # Sprint 3 (incl. never-silently-resolve-conflict tests)
+    test_human_review_queue.py                # Sprint 3
 ```
 
-## Next up: Sprint 3
+## Next up: Sprint 4
 
-Merge agent (when two documents both claim a value for the same field,
-resolve by label strength / OCR confidence / repetition, and log conflicts
-rather than silently picking), provenance crop rendering (the bbox data
-already exists on every `ContentBlock` — this is the reviewer-facing image
-crop), and the evidence verifier (a deterministic fuzzy-text check that a
-cited block's text plausibly *supports* the extracted value, layered on top
-of the "does this block_id exist at all" check already built in Sprint 2).
+Triage agent (consumes `field_verifications`' `high_risk` count — a
+required field landing on `high_risk` should force "Needs Review" outright,
+regardless of an otherwise-good composite score) and the reviewer summary
+agent (turns the completion stats + triage verdict + review queue into a
+short adjuster-readable brief).
