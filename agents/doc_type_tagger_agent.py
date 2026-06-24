@@ -87,7 +87,8 @@ _PHOTO_TEXT_DENSITY_THRESHOLD = 40  # total characters across all OCR blocks
 
 
 def tag_doc_type_rule_based(document: DocumentRecord) -> tuple[str, float]:
-    text = document.full_text.lower()
+    # Normalize newlines, tabs, and multiple spaces into a single space
+    text = " ".join(document.full_text.lower().split())
     heading_zone = text[:_HEADING_ZONE_CHARS]
 
     if document.source_format == SourceFormat.IMAGE and len(text.strip()) < _PHOTO_TEXT_DENSITY_THRESHOLD:

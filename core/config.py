@@ -6,6 +6,8 @@ extraction/triage code don't each hardcode their own copies.
 """
 
 from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv()
 
 # --- Paths -------------------------------------------------------------
 PROJECT_ROOT = Path(__file__).resolve().parent.parent

@@ -6,11 +6,11 @@ work that lets the pipeline handle a realistic nested claim folder (the
 manager's "robust ingestion pipeline" requirement) rather than only a flat
 list of file paths.
 """
-
 from __future__ import annotations
 
 from agents.ingestion.dispatcher import discover_files, ingest, ingest_claim_folder
 from core.schemas import SourceFormat
+import os
 
 
 def _make_claim_folder(tmp_path):
@@ -59,7 +59,7 @@ def test_discover_files_walks_nested_subdirectories(tmp_path):
     claim_dir = _make_claim_folder(tmp_path)
     found = discover_files(str(claim_dir))
 
-    found_names = {p.split("/")[-1] for p in found}
+    found_names = {os.path.basename(p) for p in found}
     assert "notice_of_loss.pdf" in found_names
     assert "photo1.png" in found_names
     assert "note.html" in found_names

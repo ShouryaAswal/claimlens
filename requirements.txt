@@ -35,8 +35,8 @@ augraphy>=8.2          # realistic document scan degradation (noise, folding,
 # Added for: PaddleOCR engine (optional -- Tesseract remains the default
 # and requires none of this). See PADDLEOCR_SETUP.md before installing.
 # -----------------------------------------------------------------------
-# paddlepaddle>=3.0
-# paddleocr>=3.0
+paddlepaddle>=3.0
+paddleocr>=3.0
 
 # -----------------------------------------------------------------------
 # Added for: Sprint 2 LLM-backed agents (optional -- the LOB classifier and
@@ -45,5 +45,6 @@ augraphy>=8.2          # realistic document scan degradation (noise, folding,
 # path, or (b) section_extraction_agent.py, which has no offline fallback.
 # See SPRINT_2_NOTES.md.
 # -----------------------------------------------------------------------
-# openai>=1.0           # Groq is accessed via its OpenAI-compatible endpoint
-# google-genai>=0.3     # for Gemini-backed section extraction
+openai>=1.0           # Groq is accessed via its OpenAI-compatible endpoint
+google-genai>=0.3     # for Gemini-backed section extraction
+dotenv
