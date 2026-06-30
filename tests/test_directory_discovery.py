@@ -6,11 +6,13 @@ work that lets the pipeline handle a realistic nested claim folder (the
 manager's "robust ingestion pipeline" requirement) rather than only a flat
 list of file paths.
 """
+
 from __future__ import annotations
+
+import os
 
 from agents.ingestion.dispatcher import discover_files, ingest, ingest_claim_folder
 from core.schemas import SourceFormat
-import os
 
 
 def _make_claim_folder(tmp_path):
