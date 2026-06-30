@@ -32,19 +32,18 @@ augraphy>=8.2          # realistic document scan degradation (noise, folding,
                          # samples/real_world/REAL_DATA_SOURCES.md
 
 # -----------------------------------------------------------------------
+# Added for: Sprint 2/3/4 LLM-backed agents, loaded via .env (see
+# core/env.py and .env.example). The LOB classifier and doc-type tagger
+# still work with NEITHER of these installed, via their rule-based
+# fallback -- only section_extraction_agent.py has no offline fallback.
+# -----------------------------------------------------------------------
+python-dotenv>=1.0
+openai>=1.0           # Groq is accessed via its OpenAI-compatible endpoint
+google-genai>=0.3     # for Gemini-backed section extraction
+
+# -----------------------------------------------------------------------
 # Added for: PaddleOCR engine (optional -- Tesseract remains the default
 # and requires none of this). See PADDLEOCR_SETUP.md before installing.
 # -----------------------------------------------------------------------
-paddlepaddle>=3.0
-paddleocr>=3.0
-
-# -----------------------------------------------------------------------
-# Added for: Sprint 2 LLM-backed agents (optional -- the LOB classifier and
-# doc-type tagger work with NEITHER of these installed, via their
-# rule-based fallback. Only needed for: (a) the LLM-backed classification
-# path, or (b) section_extraction_agent.py, which has no offline fallback.
-# See SPRINT_2_NOTES.md.
-# -----------------------------------------------------------------------
-openai>=1.0           # Groq is accessed via its OpenAI-compatible endpoint
-google-genai>=0.3     # for Gemini-backed section extraction
-dotenv
+# paddlepaddle>=3.0
+# paddleocr>=3.0

@@ -1,7 +1,7 @@
 # ClaimLens v2
 
 Agentic OCR/document-understanding + LLM claims-intake MVP.
-Insurance AI Platform Internship · Sprints 0, 1, 2 & 3 complete (19–27 Jun 2026).
+Insurance AI Platform Internship · Sprints 0–4 complete (19 Jun – 1 Jul 2026).
 
 This repo accelerates **steps 2–5 of the claims lifecycle** (FNOL intake →
 basic validation → triage) and hands a structured, evidence-linked work
@@ -18,12 +18,12 @@ architecture and sprint plan.
 | **1** | Multi-format ingestion: PDF (digital + scanned/OCR), DOCX, PPTX, images, hyperlinks, nested claim folders; long-document handling; dual OCR engines (Tesseract + PaddleOCR) | ✅ Done |
 | **2** | LOB classification, doc-type tagging, Gate Check, section-wise extraction | ✅ Done |
 | **3** | Merge agent, provenance crop rendering, evidence verifier (exact/fuzzy matching), confidence rating, optional LLM second opinion, human review queue | ✅ Done |
-| 4 | Triage agent, reviewer summary agent | Not started |
+| **4** | Triage agent (forced-review override rule), reviewer summary agent | ✅ Done |
 | 5 | Streamlit frontend | Not started |
 | 6 | Testing, polish, demo | Not started |
 
-**158 tests passing.** See `SPRINT_3_NOTES.md` for the verification/
-confidence-rating architecture and the safety properties it enforces.
+**185 tests passing.** `.env` is loaded automatically (`core/env.py`) — see
+`.env.example`. See `SPRINT_4_NOTES.md` for the triage/summary architecture.
 
 ## Setup
 
@@ -40,8 +40,17 @@ Optional, for the PaddleOCR engine (see `PADDLEOCR_SETUP.md`) and the
 LLM-backed agents (see `SPRINT_2_NOTES.md`):
 ```bash
 pip install paddlepaddle paddleocr   # PaddleOCR engine
-pip install openai google-genai      # Groq + Gemini clients
 ```
+
+Copy `.env.example` to `.env` and fill in your keys to enable real LLM
+calls (Groq + Gemini are installed by default now — `requirements.txt`
+includes `openai`, `google-genai`, and `python-dotenv`):
+```bash
+cp .env.example .env   # then edit .env with your real GROQ_API_KEY / GOOGLE_API_KEY
+```
+`.env` is gitignored and loaded automatically (`core/env.py`) — nothing
+else to wire up. Without it, every agent still runs in rule-based/demo
+mode (see each sprint's NOTES.md for exactly what that means per agent).
 
 Generate synthetic sample claim documents (one per supported format, plus a
 22-page stress test):
@@ -72,6 +81,13 @@ verifier actually catches it):
 
 ```bash
 python3 scripts/run_sprint3_demo.py
+```
+
+Run the Sprint 4 pipeline demo (adds triage and the reviewer summary on
+top of Sprint 3 — the full pipeline, end to end):
+
+```bash
+python3 scripts/run_sprint4_demo.py
 ```
 
 Run the test suite:
@@ -238,6 +254,45 @@ regression test. Full writeup in `SPRINT_3_NOTES.md` — kept visible
 deliberately, since it's a good demonstration of exactly the failure mode
 this sprint's tests exist to surface.
 
+## What Sprint 4 built: triage and the reviewer summary
+
+Two agents, closing the loop from "here's what we found" to "here's what
+you should do about it":
+
+| Module | Job |
+|---|---|
+| `triage_agent.py` | Rule-based composite score (missing mandatory docs, needs_review/high_risk fields, high-value-claim escalation) → `stp_candidate` / `needs_review` / `high_risk_incomplete` |
+| `reviewer_summary_agent.py` | Turns completion stats + the triage verdict + the human review queue into a short adjuster-readable brief — rule-based template by default (never invents a fact), LLM-backed prose when a key is configured |
+
+**The rule that carries through from Sprint 3, one layer up:** a
+`HIGH_RISK` verification result on a **required** field sets
+`forced_review=True` on the `TriageVerdict`, which makes `stp_candidate`
+impossible for that claim regardless of how low the rest of the composite
+score is. A claim can't be auto-approved for straight-through processing
+because nine fields are perfect if the tenth is a wrong dollar amount —
+same non-negotiable principle as "an LLM agreeing cannot override a
+deterministic critical-field failure," now enforced one level up the
+pipeline instead of just at the field level.
+(`tests/test_triage_agent.py::test_high_risk_required_field_forces_review_even_with_otherwise_low_score`)
+
+`reviewer_summary_agent.py`'s rule-based mode is deliberately built so
+every sentence is a direct readout of an already-computed number or reason
+string — it cannot hallucinate a fact about the claim, because it never
+generates one; it only assembles ones that already exist elsewhere in
+`ClaimState`. The LLM-backed mode is explicitly instructed not to invent
+facts either, and falls back to the rule-based template if the call fails
+or returns something empty/unusable — same resilience pattern as every
+other LLM-touching agent in this project.
+
+## `.env` support
+
+`core/env.py` loads a `.env` file (via `python-dotenv`) before any agent
+reads `GROQ_API_KEY`, `GOOGLE_API_KEY`, or `CLAIMLENS_OCR_ENGINE` — see
+`.env.example` for the template. A real `export`/`set` environment variable
+always takes priority over a value sitting in `.env` (`override=False`).
+If `python-dotenv` isn't installed, this degrades to "environment
+variables still work if exported the normal way" rather than crashing.
+
 ## Repository structure
 
 ```
@@ -254,10 +309,12 @@ claimlens-agentic-mvp/
   core/
     schemas.py           # Pydantic models: ContentBlock, DocumentRecord,
                           # FieldDefinition, SectionDefinition, LOBSchema,
-                          # ExtractedField, ClaimState
+                          # ExtractedField, ClaimState, FieldVerification,
+                          # ReviewQueueItem, TriageVerdict
     schema_loader.py      # deterministic LOB -> LOBSchema lookup
     config.py             # shared constants (incl. OCR_ENGINE selection)
     llm_client.py          # Groq + Gemini client wrappers, env-var configured
+    env.py                  # loads .env (see .env.example) before config/llm_client read env vars
   agents/
     lob_classifier_agent.py        # Sprint 2
     doc_type_tagger_agent.py        # Sprint 2
@@ -269,6 +326,8 @@ claimlens-agentic-mvp/
     provenance_agent.py                   # Sprint 3 (block_id -> crop image)
     merge_agent.py                         # Sprint 3 (multi-citation/candidate conflict resolution)
     human_review_queue.py                   # Sprint 3 (basis for Sprint 5's reviewer UI)
+    triage_agent.py                          # Sprint 4 (forced-review override rule)
+    reviewer_summary_agent.py                 # Sprint 4 (rule-based template + optional LLM prose)
     ingestion/
       base.py             # shared exceptions
       ocr_utils.py         # backward-compat shim -> ocr_engines/factory.py
@@ -314,12 +373,17 @@ claimlens-agentic-mvp/
     test_provenance_agent.py                # Sprint 3
     test_merge_agent.py                      # Sprint 3 (incl. never-silently-resolve-conflict tests)
     test_human_review_queue.py                # Sprint 3
+    test_triage_agent.py                        # Sprint 4 (incl. forced-review override tests)
+    test_reviewer_summary_agent.py               # Sprint 4
 ```
 
-## Next up: Sprint 4
+## Next up: Sprint 5
 
-Triage agent (consumes `field_verifications`' `high_risk` count — a
-required field landing on `high_risk` should force "Needs Review" outright,
-regardless of an otherwise-good composite score) and the reviewer summary
-agent (turns the completion stats + triage verdict + review queue into a
-short adjuster-readable brief).
+Streamlit frontend: upload a claim folder (or individual files), run the
+full Sprint 0-4 pipeline, and show the filled-schema view with
+click-field-to-see-crop, the triage verdict banner, and the reviewer
+summary — the actual demo-able UI an adjuster would look at. Every backend
+piece it needs (`ingest_claim_folder`, `rate_all_fields`,
+`generate_crops_for_claim`, `apply_triage_to_claim`,
+`generate_reviewer_summary`) already exists and is tested; Sprint 5 is
+wiring, not new agent logic.
