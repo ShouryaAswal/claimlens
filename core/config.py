@@ -6,8 +6,8 @@ extraction/triage code don't each hardcode their own copies.
 """
 
 from pathlib import Path
-from dotenv import load_dotenv
-load_dotenv()
+
+from core import env  # noqa: F401 -- side effect: loads .env before any os.environ.get() below
 
 # --- Paths -------------------------------------------------------------
 PROJECT_ROOT = Path(__file__).resolve().parent.parent

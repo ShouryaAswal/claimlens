@@ -27,7 +27,7 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 from enum import Enum
-from typing import Any, Literal, Optional
+from typing import Any, Literal, Optional, Union
 
 from pydantic import BaseModel, Field, field_validator
 
@@ -70,6 +70,26 @@ class RiskLevel(str, Enum):
     OK = "ok"
     NEEDS_REVIEW = "needs_review"
     HIGH_RISK = "high_risk"
+
+
+class TriageTier(str, Enum):
+    STP_CANDIDATE = "stp_candidate"
+    NEEDS_REVIEW = "needs_review"
+    HIGH_RISK_INCOMPLETE = "high_risk_incomplete"
+
+
+class TriageVerdict(BaseModel):
+    """Sprint 4's triage output. `forced_review` is the field that matters
+    most: it's True whenever a REQUIRED field landed on RiskLevel.HIGH_RISK
+    during Sprint 3's verification -- in that case the tier can never be
+    "stp_candidate" no matter how good the rest of the composite score
+    looks. See agents/triage_agent.py for the full rule set."""
+
+    tier: TriageTier
+    score: int
+    forced_review: bool
+    reasons: list[str] = Field(default_factory=list)
+    high_risk_field_ids: list[str] = Field(default_factory=list)
 
 
 class LLMVerificationResult(BaseModel):
@@ -215,14 +235,39 @@ class LOBSchema(BaseModel):
 # ---------------------------------------------------------------------------
 
 class ExtractedField(BaseModel):
-    """Populated in Sprint 2+. Scaffolded now so ClaimState has a stable shape."""
+    """Populated in Sprint 2+. Scaffolded now so ClaimState has a stable shape.
+
+    ``value`` is typed as ``Union[str, int, float, None]`` so that LLM responses
+    that return numbers (e.g. ``4250.0``) are stored with the right Python type
+    instead of crashing Pydantic validation.  The validator below coerces:
+      - whole-number floats → int  (e.g. ``4250.0`` → ``4250``)
+      - fractional floats   → float (unchanged)
+      - everything else     → str  (via ``str()`` coercion)
+    ``None`` passes through unchanged (field not found).
+    """
 
     field_id: str
-    value: Optional[str] = None
+    value: Optional[Union[str, int, float]] = None
     confidence: float = Field(default=0.0, ge=0.0, le=1.0)
     evidence_block_ids: list[str] = Field(default_factory=list)
     status: Literal["found", "missing", "low_confidence", "conflicting"] = "missing"
     reason: Optional[str] = None
+
+    @field_validator("value", mode="before")
+    @classmethod
+    def coerce_value(cls, v: Any) -> Optional[Union[str, int, float]]:
+        """Accept whatever the LLM returns and normalise to a sensible Python type."""
+        if v is None:
+            return None
+        if isinstance(v, bool):          # bool is a subclass of int — keep as str
+            return str(v).lower()
+        if isinstance(v, int):
+            return v
+        if isinstance(v, float):
+            # Store whole-number floats as int (e.g. 4250.0 → 4250)
+            return int(v) if v == int(v) else v
+        # Anything else (list, dict, …) — stringify rather than crash
+        return str(v) if not isinstance(v, str) else v
 
 
 class ClaimState(BaseModel):
@@ -237,7 +282,7 @@ class ClaimState(BaseModel):
     extracted_fields: dict[str, ExtractedField] = Field(default_factory=dict)
     field_verifications: dict[str, FieldVerification] = Field(default_factory=dict)
     missing_mandatory_docs: list[str] = Field(default_factory=list)
-    triage: Optional[dict[str, Any]] = None
+    triage: Optional[TriageVerdict] = None
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
     @property

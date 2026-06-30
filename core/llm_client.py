@@ -36,10 +36,12 @@ import os
 from dataclasses import dataclass
 from typing import Optional, Protocol
 
+from core import env  # noqa: F401 -- side effect: loads .env before any os.environ.get() below
+
 logger = logging.getLogger(__name__)
 
 GROQ_DEFAULT_MODEL = os.environ.get("CLAIMLENS_GROQ_MODEL", "openai/gpt-oss-120b")
-GEMINI_DEFAULT_MODEL = os.environ.get("CLAIMLENS_GEMINI_MODEL", "gemini-3-flash")
+GEMINI_DEFAULT_MODEL = os.environ.get("CLAIMLENS_GEMINI_MODEL", "gemini-3.1-flash-lite")
 
 
 class LLMNotConfiguredError(Exception):
