@@ -1,0 +1,1870 @@
+[
+  {
+    "doc_id": "doc_0ef46f65",
+    "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\auto_claim_01.pdf",
+    "source_format": "pdf",
+    "page_count": 2,
+    "doc_type": null,
+    "blocks": [
+      {
+        "block_id": "doc_0ef46f65_p1_b001",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\auto_claim_01.pdf",
+        "source_format": "pdf",
+        "page": 1,
+        "locator": "page_1_block_1",
+        "text": "AUTOMOBILE LOSS NOTICE",
+        "bbox": [
+          50.0,
+          38.17499923706055,
+          199.1490020751953,
+          53.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_0ef46f65_p1_b002",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\auto_claim_01.pdf",
+        "source_format": "pdf",
+        "page": 1,
+        "locator": "page_1_block_2",
+        "text": "Policy Number: AUTO-2026-00981Carrier: Meridian Mutual Insurance  NAIC Code: 11223Policy Period: 2026-01-01 to 2026-12-31",
+        "bbox": [
+          50.0,
+          70.17500305175781,
+          317.761962890625,
+          117.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_0ef46f65_p1_b003",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\auto_claim_01.pdf",
+        "source_format": "pdf",
+        "page": 1,
+        "locator": "page_1_block_3",
+        "text": "Date of Loss: 2026-06-12   Time of Loss: 5:45 PMLocation of Loss: Intersection of 5th Ave and Oak St, Springfield",
+        "bbox": [
+          50.0,
+          134.1750030517578,
+          361.8389892578125,
+          165.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_0ef46f65_p1_b004",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\auto_claim_01.pdf",
+        "source_format": "pdf",
+        "page": 1,
+        "locator": "page_1_block_4",
+        "text": "Description of Accident:Insured vehicle was stopped at a red light when struck from behindby the other party's vehicle. Rear bumper and trunk sustained damage.",
+        "bbox": [
+          50.0,
+          182.1750030517578,
+          395.7079772949219,
+          229.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_0ef46f65_p1_b005",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\auto_claim_01.pdf",
+        "source_format": "pdf",
+        "page": 1,
+        "locator": "page_1_block_5",
+        "text": "Driver Name: Priya NairDriver License Number: D1234567Vehicle VIN: 1HGCM82633A004352Vehicle Make/Model/Year: Honda Accord 2022Where Damage Can Be Seen: Rear bumper, trunk lid",
+        "bbox": [
+          50.0,
+          246.1750030517578,
+          310.43597412109375,
+          325.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_0ef46f65_p1_b006",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\auto_claim_01.pdf",
+        "source_format": "pdf",
+        "page": 1,
+        "locator": "page_1_block_6",
+        "text": "Other Party / Driver Name: Marcus WebbOther Vehicle Plate: XYZ-4821",
+        "bbox": [
+          50.0,
+          342.17498779296875,
+          251.10194396972656,
+          373.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_0ef46f65_p1_b007",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\auto_claim_01.pdf",
+        "source_format": "pdf",
+        "page": 1,
+        "locator": "page_1_block_7",
+        "text": "Witness Name: Aaliyah Cho",
+        "bbox": [
+          50.0,
+          390.17498779296875,
+          186.927978515625,
+          405.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_0ef46f65_p2_b008",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\auto_claim_01.pdf",
+        "source_format": "pdf",
+        "page": 2,
+        "locator": "page_2_block_8",
+        "text": "AUTOMOBILE LOSS NOTICE (continued)",
+        "bbox": [
+          50.0,
+          38.17499923706055,
+          257.2289733886719,
+          53.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_0ef46f65_p2_b009",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\auto_claim_01.pdf",
+        "source_format": "pdf",
+        "page": 2,
+        "locator": "page_2_block_9",
+        "text": "Police Report Number: SPD-2026-44210Reporting Police Department: Springfield Police Department",
+        "bbox": [
+          50.0,
+          70.17500305175781,
+          342.8309020996094,
+          101.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_0ef46f65_p2_b010",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\auto_claim_01.pdf",
+        "source_format": "pdf",
+        "page": 2,
+        "locator": "page_2_block_10",
+        "text": "Injuries Reported: No",
+        "bbox": [
+          50.0,
+          118.17500305175781,
+          153.92799377441406,
+          133.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_0ef46f65_p2_b011",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\auto_claim_01.pdf",
+        "source_format": "pdf",
+        "page": 2,
+        "locator": "page_2_block_11",
+        "text": "Repair Estimate: $4,250.00Rental Vehicle Needed: Yes",
+        "bbox": [
+          50.0,
+          150.1750030517578,
+          187.5659637451172,
+          181.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_0ef46f65_p2_b012",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\auto_claim_01.pdf",
+        "source_format": "pdf",
+        "page": 2,
+        "locator": "page_2_block_12",
+        "text": "Additional Remarks:Insured reports no prior accidents in the last 5 years.",
+        "bbox": [
+          50.0,
+          198.1750030517578,
+          306.16796875,
+          229.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      }
+    ],
+    "warnings": [],
+    "ingested_at": "2026-06-25T10:46:25.733436Z"
+  },
+  {
+    "doc_id": "doc_c6b43158",
+    "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\claim_overview_01.pptx",
+    "source_format": "pptx",
+    "page_count": 2,
+    "doc_type": null,
+    "blocks": [
+      {
+        "block_id": "doc_c6b43158_slide1_b001",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\claim_overview_01.pptx",
+        "source_format": "pptx",
+        "page": 1,
+        "locator": "slide_1_shape_0",
+        "text": "Claim Overview: AUTO-2026-00981",
+        "bbox": [
+          36.0,
+          21.62503937007874,
+          684.0,
+          111.62503937007874
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pptx_shape_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_c6b43158_slide1_b002",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\claim_overview_01.pptx",
+        "source_format": "pptx",
+        "page": 1,
+        "locator": "slide_1_shape_1",
+        "text": "Policyholder: Priya Nair\nLoss Date: 2026-06-12\nStatus: Pending adjuster review",
+        "bbox": [
+          36.0,
+          126.0,
+          684.0,
+          482.37503937007875
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pptx_shape_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_c6b43158_slide2_b003",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\claim_overview_01.pptx",
+        "source_format": "pptx",
+        "page": 2,
+        "locator": "slide_2_shape_0",
+        "text": "Financial Summary",
+        "bbox": [
+          36.0,
+          21.62503937007874,
+          684.0,
+          111.62503937007874
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pptx_shape_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_c6b43158_slide2_b004",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\claim_overview_01.pptx",
+        "source_format": "pptx",
+        "page": 2,
+        "locator": "slide_2_shape_1",
+        "text": "Repair Estimate: $4,250.00\nRental Coverage: Approved",
+        "bbox": [
+          36.0,
+          126.0,
+          684.0,
+          482.37503937007875
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pptx_shape_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_c6b43158_slide2_b005",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\claim_overview_01.pptx",
+        "source_format": "pptx",
+        "page": 2,
+        "locator": "slide_2_shape_2",
+        "text": "Note: Awaiting police report confirmation.",
+        "bbox": [
+          72.0,
+          324.0,
+          360.0,
+          396.0
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pptx_shape_text",
+        "extra": {}
+      }
+    ],
+    "warnings": [],
+    "ingested_at": "2026-06-25T10:46:25.792593Z"
+  },
+  {
+    "doc_id": "doc_3ad770f1",
+    "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\damage_photo_01.png",
+    "source_format": "image",
+    "page_count": 1,
+    "doc_type": null,
+    "blocks": [
+      {
+        "block_id": "doc_3ad770f1_img_b001",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\damage_photo_01.png",
+        "source_format": "image",
+        "page": 1,
+        "locator": "ocr_line_1",
+        "text": "REPAIRESTIMATE",
+        "bbox": [
+          41.0,
+          42.0,
+          123.0,
+          50.0
+        ],
+        "confidence": 0.49,
+        "extraction_method": "pytesseract_ocr",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_3ad770f1_img_b002",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\damage_photo_01.png",
+        "source_format": "image",
+        "page": 1,
+        "locator": "ocr_line_2",
+        "text": "Vehicle: Honda Accord 2022",
+        "bbox": [
+          40.0,
+          97.0,
+          169.0,
+          105.0
+        ],
+        "confidence": 0.7575,
+        "extraction_method": "pytesseract_ocr",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_3ad770f1_img_b003",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\damage_photo_01.png",
+        "source_format": "image",
+        "page": 1,
+        "locator": "ocr_line_3",
+        "text": "Peat bumper replacement $1,800.00,",
+        "bbox": [
+          37.0,
+          142.0,
+          213.0,
+          170.0
+        ],
+        "confidence": 0.8225,
+        "extraction_method": "pytesseract_ocr",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_3ad770f1_img_b004",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\damage_photo_01.png",
+        "source_format": "image",
+        "page": 1,
+        "locator": "ocr_line_4",
+        "text": "Trunk td repair $1,450.00",
+        "bbox": [
+          41.0,
+          206.0,
+          164.0,
+          217.0
+        ],
+        "confidence": 0.7825,
+        "extraction_method": "pytesseract_ocr",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_3ad770f1_img_b005",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\damage_photo_01.png",
+        "source_format": "image",
+        "page": 1,
+        "locator": "ocr_line_5",
+        "text": "Paintand labor: $1,000.00",
+        "bbox": [
+          41.0,
+          261.0,
+          159.0,
+          271.0
+        ],
+        "confidence": 0.7267,
+        "extraction_method": "pytesseract_ocr",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_3ad770f1_img_b006",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\damage_photo_01.png",
+        "source_format": "image",
+        "page": 1,
+        "locator": "ocr_line_6",
+        "text": "Total Estimate: $4250.00",
+        "bbox": [
+          41.0,
+          307.0,
+          153.0,
+          335.0
+        ],
+        "confidence": 0.7333,
+        "extraction_method": "pytesseract_ocr",
+        "extra": {}
+      }
+    ],
+    "warnings": [],
+    "ingested_at": "2026-06-25T10:46:36.956282Z"
+  },
+  {
+    "doc_id": "doc_69d5577f",
+    "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\health_claim_01.docx",
+    "source_format": "docx",
+    "page_count": null,
+    "doc_type": null,
+    "blocks": [
+      {
+        "block_id": "doc_69d5577f_para_b001",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\health_claim_01.docx",
+        "source_format": "docx",
+        "page": null,
+        "locator": "paragraph_0",
+        "text": "Health Claim Intake Summary",
+        "bbox": null,
+        "confidence": 1.0,
+        "extraction_method": "docx_paragraph",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_69d5577f_para_b002",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\health_claim_01.docx",
+        "source_format": "docx",
+        "page": null,
+        "locator": "paragraph_1",
+        "text": "Patient Name: Daniel Osei",
+        "bbox": null,
+        "confidence": 1.0,
+        "extraction_method": "docx_paragraph",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_69d5577f_para_b003",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\health_claim_01.docx",
+        "source_format": "docx",
+        "page": null,
+        "locator": "paragraph_2",
+        "text": "Member ID: MBR-77231908",
+        "bbox": null,
+        "confidence": 1.0,
+        "extraction_method": "docx_paragraph",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_69d5577f_para_b004",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\health_claim_01.docx",
+        "source_format": "docx",
+        "page": null,
+        "locator": "paragraph_3",
+        "text": "Date of Birth: 1989-03-22",
+        "bbox": null,
+        "confidence": 1.0,
+        "extraction_method": "docx_paragraph",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_69d5577f_para_b005",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\health_claim_01.docx",
+        "source_format": "docx",
+        "page": null,
+        "locator": "paragraph_4",
+        "text": "Provider / Facility Name: Lakeside General Hospital",
+        "bbox": null,
+        "confidence": 1.0,
+        "extraction_method": "docx_paragraph",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_69d5577f_para_b006",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\health_claim_01.docx",
+        "source_format": "docx",
+        "page": null,
+        "locator": "paragraph_5",
+        "text": "Admission Date: 2026-06-08",
+        "bbox": null,
+        "confidence": 1.0,
+        "extraction_method": "docx_paragraph",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_69d5577f_para_b007",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\health_claim_01.docx",
+        "source_format": "docx",
+        "page": null,
+        "locator": "paragraph_6",
+        "text": "Discharge Date: 2026-06-11",
+        "bbox": null,
+        "confidence": 1.0,
+        "extraction_method": "docx_paragraph",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_69d5577f_para_b008",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\health_claim_01.docx",
+        "source_format": "docx",
+        "page": null,
+        "locator": "paragraph_7",
+        "text": "Diagnosis Description: Acute appendicitis, laparoscopic appendectomy performed.",
+        "bbox": null,
+        "confidence": 1.0,
+        "extraction_method": "docx_paragraph",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_69d5577f_para_b009",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\health_claim_01.docx",
+        "source_format": "docx",
+        "page": null,
+        "locator": "paragraph_8",
+        "text": "Billing Summary",
+        "bbox": null,
+        "confidence": 1.0,
+        "extraction_method": "docx_paragraph",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_69d5577f_para_b010",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\health_claim_01.docx",
+        "source_format": "docx",
+        "page": null,
+        "locator": "paragraph_9",
+        "text": "Pre-Authorization Number: PA-2026-30112",
+        "bbox": null,
+        "confidence": 1.0,
+        "extraction_method": "docx_paragraph",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_69d5577f_tbl_b011",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\health_claim_01.docx",
+        "source_format": "docx",
+        "page": null,
+        "locator": "table_0_row_0",
+        "text": "Item | Amount",
+        "bbox": null,
+        "confidence": 1.0,
+        "extraction_method": "docx_table_row",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_69d5577f_tbl_b012",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\health_claim_01.docx",
+        "source_format": "docx",
+        "page": null,
+        "locator": "table_0_row_1",
+        "text": "Total Billed Amount | $9,840.00",
+        "bbox": null,
+        "confidence": 1.0,
+        "extraction_method": "docx_table_row",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_69d5577f_tbl_b013",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\health_claim_01.docx",
+        "source_format": "docx",
+        "page": null,
+        "locator": "table_0_row_2",
+        "text": "Co-Pay Amount | $250.00",
+        "bbox": null,
+        "confidence": 1.0,
+        "extraction_method": "docx_table_row",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_69d5577f_tbl_b014",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\health_claim_01.docx",
+        "source_format": "docx",
+        "page": null,
+        "locator": "table_0_row_3",
+        "text": "Allowed Amount | $8,100.00",
+        "bbox": null,
+        "confidence": 1.0,
+        "extraction_method": "docx_table_row",
+        "extra": {}
+      }
+    ],
+    "warnings": [],
+    "ingested_at": "2026-06-25T10:46:36.970074Z"
+  },
+  {
+    "doc_id": "doc_51a162bc",
+    "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+    "source_format": "pdf",
+    "page_count": 22,
+    "doc_type": null,
+    "blocks": [
+      {
+        "block_id": "doc_51a162bc_p1_b001",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 1,
+        "locator": "page_1_block_1",
+        "text": "CLAIM FILE SUPPLEMENT -- Page 1 of 22",
+        "bbox": [
+          50.0,
+          36.025001525878906,
+          302.1480407714844,
+          53.887001037597656
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p1_b002",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 1,
+        "locator": "page_1_block_2",
+        "text": "Policy Number: AUTO-2026-00981",
+        "bbox": [
+          50.0,
+          68.17500305175781,
+          220.55496215820312,
+          83.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p1_b003",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 1,
+        "locator": "page_1_block_3",
+        "text": "Adjuster note #1: Reviewed supporting documentation, no discrepancies found.",
+        "bbox": [
+          50.0,
+          88.17500305175781,
+          436.4189758300781,
+          103.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p2_b004",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 2,
+        "locator": "page_2_block_4",
+        "text": "CLAIM FILE SUPPLEMENT -- Page 2 of 22",
+        "bbox": [
+          50.0,
+          36.025001525878906,
+          302.1480407714844,
+          53.887001037597656
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p2_b005",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 2,
+        "locator": "page_2_block_5",
+        "text": "Policy Number: AUTO-2026-00981",
+        "bbox": [
+          50.0,
+          68.17500305175781,
+          220.55496215820312,
+          83.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p2_b006",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 2,
+        "locator": "page_2_block_6",
+        "text": "Adjuster note #2: Reviewed supporting documentation, no discrepancies found.",
+        "bbox": [
+          50.0,
+          88.17500305175781,
+          436.4189758300781,
+          103.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p3_b007",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 3,
+        "locator": "page_3_block_7",
+        "text": "CLAIM FILE SUPPLEMENT -- Page 3 of 22",
+        "bbox": [
+          50.0,
+          36.025001525878906,
+          302.1480407714844,
+          53.887001037597656
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p3_b008",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 3,
+        "locator": "page_3_block_8",
+        "text": "Policy Number: AUTO-2026-00981",
+        "bbox": [
+          50.0,
+          68.17500305175781,
+          220.55496215820312,
+          83.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p3_b009",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 3,
+        "locator": "page_3_block_9",
+        "text": "Adjuster note #3: Reviewed supporting documentation, no discrepancies found.",
+        "bbox": [
+          50.0,
+          88.17500305175781,
+          436.4189758300781,
+          103.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p4_b010",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 4,
+        "locator": "page_4_block_10",
+        "text": "CLAIM FILE SUPPLEMENT -- Page 4 of 22",
+        "bbox": [
+          50.0,
+          36.025001525878906,
+          302.1480407714844,
+          53.887001037597656
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p4_b011",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 4,
+        "locator": "page_4_block_11",
+        "text": "Policy Number: AUTO-2026-00981",
+        "bbox": [
+          50.0,
+          68.17500305175781,
+          220.55496215820312,
+          83.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p4_b012",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 4,
+        "locator": "page_4_block_12",
+        "text": "Adjuster note #4: Reviewed supporting documentation, no discrepancies found.",
+        "bbox": [
+          50.0,
+          88.17500305175781,
+          436.4189758300781,
+          103.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p5_b013",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 5,
+        "locator": "page_5_block_13",
+        "text": "CLAIM FILE SUPPLEMENT -- Page 5 of 22",
+        "bbox": [
+          50.0,
+          36.025001525878906,
+          302.1480407714844,
+          53.887001037597656
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p5_b014",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 5,
+        "locator": "page_5_block_14",
+        "text": "Policy Number: AUTO-2026-00981",
+        "bbox": [
+          50.0,
+          68.17500305175781,
+          220.55496215820312,
+          83.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p5_b015",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 5,
+        "locator": "page_5_block_15",
+        "text": "Adjuster note #5: Reviewed supporting documentation, no discrepancies found.",
+        "bbox": [
+          50.0,
+          88.17500305175781,
+          436.4189758300781,
+          103.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p6_b016",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 6,
+        "locator": "page_6_block_16",
+        "text": "CLAIM FILE SUPPLEMENT -- Page 6 of 22",
+        "bbox": [
+          50.0,
+          36.025001525878906,
+          302.1480407714844,
+          53.887001037597656
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p6_b017",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 6,
+        "locator": "page_6_block_17",
+        "text": "Policy Number: AUTO-2026-00981",
+        "bbox": [
+          50.0,
+          68.17500305175781,
+          220.55496215820312,
+          83.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p6_b018",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 6,
+        "locator": "page_6_block_18",
+        "text": "Adjuster note #6: Reviewed supporting documentation, no discrepancies found.",
+        "bbox": [
+          50.0,
+          88.17500305175781,
+          436.4189758300781,
+          103.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p7_b019",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 7,
+        "locator": "page_7_block_19",
+        "text": "CLAIM FILE SUPPLEMENT -- Page 7 of 22",
+        "bbox": [
+          50.0,
+          36.025001525878906,
+          302.1480407714844,
+          53.887001037597656
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p7_b020",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 7,
+        "locator": "page_7_block_20",
+        "text": "Policy Number: AUTO-2026-00981",
+        "bbox": [
+          50.0,
+          68.17500305175781,
+          220.55496215820312,
+          83.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p7_b021",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 7,
+        "locator": "page_7_block_21",
+        "text": "Adjuster note #7: Reviewed supporting documentation, no discrepancies found.",
+        "bbox": [
+          50.0,
+          88.17500305175781,
+          436.4189758300781,
+          103.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p8_b022",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 8,
+        "locator": "page_8_block_22",
+        "text": "CLAIM FILE SUPPLEMENT -- Page 8 of 22",
+        "bbox": [
+          50.0,
+          36.025001525878906,
+          302.1480407714844,
+          53.887001037597656
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p8_b023",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 8,
+        "locator": "page_8_block_23",
+        "text": "Policy Number: AUTO-2026-00981",
+        "bbox": [
+          50.0,
+          68.17500305175781,
+          220.55496215820312,
+          83.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p8_b024",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 8,
+        "locator": "page_8_block_24",
+        "text": "Adjuster note #8: Reviewed supporting documentation, no discrepancies found.",
+        "bbox": [
+          50.0,
+          88.17500305175781,
+          436.4189758300781,
+          103.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p9_b025",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 9,
+        "locator": "page_9_block_25",
+        "text": "CLAIM FILE SUPPLEMENT -- Page 9 of 22",
+        "bbox": [
+          50.0,
+          36.025001525878906,
+          302.1480407714844,
+          53.887001037597656
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p9_b026",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 9,
+        "locator": "page_9_block_26",
+        "text": "Policy Number: AUTO-2026-00981",
+        "bbox": [
+          50.0,
+          68.17500305175781,
+          220.55496215820312,
+          83.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p9_b027",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 9,
+        "locator": "page_9_block_27",
+        "text": "Adjuster note #9: Reviewed supporting documentation, no discrepancies found.",
+        "bbox": [
+          50.0,
+          88.17500305175781,
+          436.4189758300781,
+          103.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p10_b028",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 10,
+        "locator": "page_10_block_28",
+        "text": "CLAIM FILE SUPPLEMENT -- Page 10 of 22",
+        "bbox": [
+          50.0,
+          36.025001525878906,
+          309.37603759765625,
+          53.887001037597656
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p10_b029",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 10,
+        "locator": "page_10_block_29",
+        "text": "Policy Number: AUTO-2026-00981",
+        "bbox": [
+          50.0,
+          68.17500305175781,
+          220.55496215820312,
+          83.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p10_b030",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 10,
+        "locator": "page_10_block_30",
+        "text": "Adjuster note #10: Reviewed supporting documentation, no discrepancies found.",
+        "bbox": [
+          50.0,
+          88.17500305175781,
+          442.53497314453125,
+          103.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p11_b031",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 11,
+        "locator": "page_11_block_31",
+        "text": "CLAIM FILE SUPPLEMENT -- Page 11 of 22",
+        "bbox": [
+          50.0,
+          36.025001525878906,
+          309.37603759765625,
+          53.887001037597656
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p11_b032",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 11,
+        "locator": "page_11_block_32",
+        "text": "Policy Number: AUTO-2026-00981",
+        "bbox": [
+          50.0,
+          68.17500305175781,
+          220.55496215820312,
+          83.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p11_b033",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 11,
+        "locator": "page_11_block_33",
+        "text": "Adjuster note #11: Reviewed supporting documentation, no discrepancies found.",
+        "bbox": [
+          50.0,
+          88.17500305175781,
+          442.53497314453125,
+          103.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p12_b034",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 12,
+        "locator": "page_12_block_34",
+        "text": "CLAIM FILE SUPPLEMENT -- Page 12 of 22",
+        "bbox": [
+          50.0,
+          36.025001525878906,
+          309.37603759765625,
+          53.887001037597656
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p12_b035",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 12,
+        "locator": "page_12_block_35",
+        "text": "Policy Number: AUTO-2026-00981",
+        "bbox": [
+          50.0,
+          68.17500305175781,
+          220.55496215820312,
+          83.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p12_b036",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 12,
+        "locator": "page_12_block_36",
+        "text": "Adjuster note #12: Reviewed supporting documentation, no discrepancies found.",
+        "bbox": [
+          50.0,
+          88.17500305175781,
+          442.53497314453125,
+          103.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p13_b037",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 13,
+        "locator": "page_13_block_37",
+        "text": "CLAIM FILE SUPPLEMENT -- Page 13 of 22",
+        "bbox": [
+          50.0,
+          36.025001525878906,
+          309.37603759765625,
+          53.887001037597656
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p13_b038",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 13,
+        "locator": "page_13_block_38",
+        "text": "Policy Number: AUTO-2026-00981",
+        "bbox": [
+          50.0,
+          68.17500305175781,
+          220.55496215820312,
+          83.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p13_b039",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 13,
+        "locator": "page_13_block_39",
+        "text": "Adjuster note #13: Reviewed supporting documentation, no discrepancies found.",
+        "bbox": [
+          50.0,
+          88.17500305175781,
+          442.53497314453125,
+          103.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p14_b040",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 14,
+        "locator": "page_14_block_40",
+        "text": "CLAIM FILE SUPPLEMENT -- Page 14 of 22",
+        "bbox": [
+          50.0,
+          36.025001525878906,
+          309.37603759765625,
+          53.887001037597656
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p14_b041",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 14,
+        "locator": "page_14_block_41",
+        "text": "Policy Number: AUTO-2026-00981",
+        "bbox": [
+          50.0,
+          68.17500305175781,
+          220.55496215820312,
+          83.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p14_b042",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 14,
+        "locator": "page_14_block_42",
+        "text": "Adjuster note #14: Reviewed supporting documentation, no discrepancies found.",
+        "bbox": [
+          50.0,
+          88.17500305175781,
+          442.53497314453125,
+          103.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p15_b043",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 15,
+        "locator": "page_15_block_43",
+        "text": "CLAIM FILE SUPPLEMENT -- Page 15 of 22",
+        "bbox": [
+          50.0,
+          36.025001525878906,
+          309.37603759765625,
+          53.887001037597656
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p15_b044",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 15,
+        "locator": "page_15_block_44",
+        "text": "Policy Number: AUTO-2026-00981",
+        "bbox": [
+          50.0,
+          68.17500305175781,
+          220.55496215820312,
+          83.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p15_b045",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 15,
+        "locator": "page_15_block_45",
+        "text": "Adjuster note #15: Reviewed supporting documentation, no discrepancies found.",
+        "bbox": [
+          50.0,
+          88.17500305175781,
+          442.53497314453125,
+          103.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p16_b046",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 16,
+        "locator": "page_16_block_46",
+        "text": "CLAIM FILE SUPPLEMENT -- Page 16 of 22",
+        "bbox": [
+          50.0,
+          36.025001525878906,
+          309.37603759765625,
+          53.887001037597656
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p16_b047",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 16,
+        "locator": "page_16_block_47",
+        "text": "Policy Number: AUTO-2026-00981",
+        "bbox": [
+          50.0,
+          68.17500305175781,
+          220.55496215820312,
+          83.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p16_b048",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 16,
+        "locator": "page_16_block_48",
+        "text": "Adjuster note #16: Reviewed supporting documentation, no discrepancies found.",
+        "bbox": [
+          50.0,
+          88.17500305175781,
+          442.53497314453125,
+          103.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p17_b049",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 17,
+        "locator": "page_17_block_49",
+        "text": "CLAIM FILE SUPPLEMENT -- Page 17 of 22",
+        "bbox": [
+          50.0,
+          36.025001525878906,
+          309.37603759765625,
+          53.887001037597656
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p17_b050",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 17,
+        "locator": "page_17_block_50",
+        "text": "Policy Number: AUTO-2026-00981",
+        "bbox": [
+          50.0,
+          68.17500305175781,
+          220.55496215820312,
+          83.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p17_b051",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 17,
+        "locator": "page_17_block_51",
+        "text": "Adjuster note #17: Reviewed supporting documentation, no discrepancies found.",
+        "bbox": [
+          50.0,
+          88.17500305175781,
+          442.53497314453125,
+          103.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p18_b052",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 18,
+        "locator": "page_18_block_52",
+        "text": "CLAIM FILE SUPPLEMENT -- Page 18 of 22",
+        "bbox": [
+          50.0,
+          36.025001525878906,
+          309.37603759765625,
+          53.887001037597656
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p18_b053",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 18,
+        "locator": "page_18_block_53",
+        "text": "Policy Number: AUTO-2026-00981",
+        "bbox": [
+          50.0,
+          68.17500305175781,
+          220.55496215820312,
+          83.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p18_b054",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 18,
+        "locator": "page_18_block_54",
+        "text": "Adjuster note #18: Reviewed supporting documentation, no discrepancies found.",
+        "bbox": [
+          50.0,
+          88.17500305175781,
+          442.53497314453125,
+          103.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p19_b055",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 19,
+        "locator": "page_19_block_55",
+        "text": "CLAIM FILE SUPPLEMENT -- Page 19 of 22",
+        "bbox": [
+          50.0,
+          36.025001525878906,
+          309.37603759765625,
+          53.887001037597656
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p19_b056",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 19,
+        "locator": "page_19_block_56",
+        "text": "Policy Number: AUTO-2026-00981",
+        "bbox": [
+          50.0,
+          68.17500305175781,
+          220.55496215820312,
+          83.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p19_b057",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 19,
+        "locator": "page_19_block_57",
+        "text": "Adjuster note #19: Reviewed supporting documentation, no discrepancies found.",
+        "bbox": [
+          50.0,
+          88.17500305175781,
+          442.53497314453125,
+          103.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p20_b058",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 20,
+        "locator": "page_20_block_58",
+        "text": "CLAIM FILE SUPPLEMENT -- Page 20 of 22",
+        "bbox": [
+          50.0,
+          36.025001525878906,
+          309.37603759765625,
+          53.887001037597656
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p20_b059",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 20,
+        "locator": "page_20_block_59",
+        "text": "Policy Number: AUTO-2026-00981",
+        "bbox": [
+          50.0,
+          68.17500305175781,
+          220.55496215820312,
+          83.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p20_b060",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 20,
+        "locator": "page_20_block_60",
+        "text": "Adjuster note #20: Reviewed supporting documentation, no discrepancies found.",
+        "bbox": [
+          50.0,
+          88.17500305175781,
+          442.53497314453125,
+          103.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p21_b061",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 21,
+        "locator": "page_21_block_61",
+        "text": "CLAIM FILE SUPPLEMENT -- Page 21 of 22",
+        "bbox": [
+          50.0,
+          36.025001525878906,
+          309.37603759765625,
+          53.887001037597656
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p21_b062",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 21,
+        "locator": "page_21_block_62",
+        "text": "Policy Number: AUTO-2026-00981",
+        "bbox": [
+          50.0,
+          68.17500305175781,
+          220.55496215820312,
+          83.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p21_b063",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 21,
+        "locator": "page_21_block_63",
+        "text": "Adjuster note #21: Reviewed supporting documentation, no discrepancies found.",
+        "bbox": [
+          50.0,
+          88.17500305175781,
+          442.53497314453125,
+          103.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p22_b064",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 22,
+        "locator": "page_22_block_64",
+        "text": "CLAIM FILE SUPPLEMENT -- Page 22 of 22",
+        "bbox": [
+          50.0,
+          36.025001525878906,
+          309.37603759765625,
+          53.887001037597656
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p22_b065",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 22,
+        "locator": "page_22_block_65",
+        "text": "Policy Number: AUTO-2026-00981",
+        "bbox": [
+          50.0,
+          68.17500305175781,
+          220.55496215820312,
+          83.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_51a162bc_p22_b066",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\long_supplement_22pages.pdf",
+        "source_format": "pdf",
+        "page": 22,
+        "locator": "page_22_block_66",
+        "text": "Adjuster note #22: Reviewed supporting documentation, no discrepancies found.",
+        "bbox": [
+          50.0,
+          88.17500305175781,
+          442.53497314453125,
+          103.28900146484375
+        ],
+        "confidence": 1.0,
+        "extraction_method": "pymupdf_text",
+        "extra": {}
+      }
+    ],
+    "warnings": [
+      "Long document: 22 pages (threshold 20). Processing page-by-page; this is expected to take longer for scanned pages than for digital ones."
+    ],
+    "ingested_at": "2026-06-25T10:46:37.053101Z"
+  },
+  {
+    "doc_id": "doc_49c21817",
+    "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\property_claim_01_scanned.pdf",
+    "source_format": "pdf",
+    "page_count": 1,
+    "doc_type": null,
+    "blocks": [
+      {
+        "block_id": "doc_49c21817_p1_b001",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\property_claim_01_scanned.pdf",
+        "source_format": "pdf",
+        "page": 1,
+        "locator": "page_1_ocr_line_1",
+        "text": "PROPERTY LOSS NOTICE",
+        "bbox": [
+          40.896,
+          42.048,
+          154.944,
+          50.112
+        ],
+        "confidence": 0.84,
+        "extraction_method": "pytesseract_ocr",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_49c21817_p1_b002",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\property_claim_01_scanned.pdf",
+        "source_format": "pdf",
+        "page": 1,
+        "locator": "page_1_ocr_line_2",
+        "text": "Policy Number PROP-2026-552 10",
+        "bbox": [
+          40.896,
+          85.824,
+          197.856,
+          99.072
+        ],
+        "confidence": 0.6025,
+        "extraction_method": "pytesseract_ocr",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_49c21817_p1_b003",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\property_claim_01_scanned.pdf",
+        "source_format": "pdf",
+        "page": 1,
+        "locator": "page_1_ocr_line_3",
+        "text": "Date of Loss: 2026-06-10",
+        "bbox": [
+          40.896,
+          131.04,
+          149.184,
+          139.968
+        ],
+        "confidence": 0.7975,
+        "extraction_method": "pytesseract_ocr",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_49c21817_p1_b004",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\property_claim_01_scanned.pdf",
+        "source_format": "pdf",
+        "page": 1,
+        "locator": "page_1_ocr_line_4",
+        "text": "Cause of Loss Wind damage to roof shingles",
+        "bbox": [
+          40.032,
+          174.816,
+          240.192,
+          188.352
+        ],
+        "confidence": 0.9175,
+        "extraction_method": "pytesseract_ocr",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_49c21817_p1_b005",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\property_claim_01_scanned.pdf",
+        "source_format": "pdf",
+        "page": 1,
+        "locator": "page_1_ocr_line_5",
+        "text": "Insured Location Address 142 Birchwood Lane, Riverton",
+        "bbox": [
+          40.896,
+          222.048,
+          297.216,
+          230.976
+        ],
+        "confidence": 0.9114,
+        "extraction_method": "pytesseract_ocr",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_49c21817_p1_b006",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\property_claim_01_scanned.pdf",
+        "source_format": "pdf",
+        "page": 1,
+        "locator": "page_1_ocr_line_6",
+        "text": "Probable Amountof Entire Lose $18,500.00",
+        "bbox": [
+          40.896,
+          266.11199999999997,
+          238.176,
+          276.192
+        ],
+        "confidence": 0.828,
+        "extraction_method": "pytesseract_ocr",
+        "extra": {}
+      },
+      {
+        "block_id": "doc_49c21817_p1_b007",
+        "source_file": "C:\\Users\\shour\\Desktop\\ClaimLens\\claimlens\\samples\\property_claim_01_scanned.pdf",
+        "source_format": "pdf",
+        "page": 1,
+        "locator": "page_1_ocr_line_7",
+        "text": "Inspection Re port Reference: INSP-998213",
+        "bbox": [
+          40.896,
+          311.03999999999996,
+          237.024,
+          321.984
+        ],
+        "confidence": 0.71,
+        "extraction_method": "pytesseract_ocr",
+        "extra": {}
+      }
+    ],
+    "warnings": [],
+    "ingested_at": "2026-06-25T10:46:38.019211Z"
+  }
+]
