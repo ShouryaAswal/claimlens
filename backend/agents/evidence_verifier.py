@@ -240,7 +240,10 @@ def verify_field(
 
     combined_evidence_text = "\n".join(b.text for b in blocks)
     verifier = _VERIFIERS.get(field_def.field_type, verify_text)
-    result = verifier(field.value, combined_evidence_text)
+    # LLM extraction can return int/float for numeric fields; all verifiers
+    # expect str, so coerce here at the single dispatch point.
+    value_str = str(field.value) if not isinstance(field.value, str) else field.value
+    result = verifier(value_str, combined_evidence_text)
 
     if field_def.field_type in CRITICAL_FIELD_TYPES and not result.matched:
         logger.warning(

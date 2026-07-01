@@ -9,3 +9,4 @@ outputs/*.json
 !outputs/.gitkeep
 .env
 augraphy_cache/
+backend/outputs/crops/*
