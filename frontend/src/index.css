@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-slate-50 text-ink-950 antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+
+  /* Numbers, IDs, VINs, amounts -- anything a reviewer must compare
+     character-for-character gets the mono face for scan-ability. */
+  .font-data {
+    @apply font-mono tabular-nums;
+  }
+
+  ::selection {
+    @apply bg-gold-400/30;
+  }
+
+  *:focus-visible {
+    @apply outline-none ring-2 ring-offset-2 ring-ink-700 ring-offset-slate-50;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: theme("colors.slate.300") transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: theme("colors.slate.300");
+    border-radius: 999px;
+  }
+}

@@ -1,0 +1,12 @@
+node_modules/
+dist/
+dist-ssr/
+*.local
+.env
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+
+# Logs
+npm-debug.log*
