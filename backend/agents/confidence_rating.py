@@ -74,7 +74,20 @@ def rate_field(
     reasons: list[str] = []
     llm_verification = None
 
-    if field.status == "missing" or field.value is None:
+    if field.status == "conflicting":
+        # Always HIGH_RISK. A confirmed conflict between two documents on a
+        # critical value is worse than a missing field -- it means we have
+        # actively contradictory evidence, not an absence of evidence. Must
+        # be checked BEFORE the missing/value-is-None branch below, since
+        # merge_agent.merge_candidates() sets value=None on a conflicting
+        # field -- without this branch first, a conflicting optional field
+        # would silently fall into the "missing" branch and come out OK.
+        risk = RiskLevel.HIGH_RISK
+        composite = 0.0
+        requires_human = True
+        reasons.append(f"CONFLICTING values detected across cited evidence: {field.reason}")
+
+    elif field.status == "missing" or field.value is None:
         risk = RiskLevel.NEEDS_REVIEW if field_def.required else RiskLevel.OK
         composite = 0.0
         requires_human = field_def.required

@@ -47,3 +47,13 @@ google-genai>=0.3     # for Gemini-backed section extraction
 # -----------------------------------------------------------------------
 # paddlepaddle>=3.0
 # paddleocr>=3.0
+
+# -----------------------------------------------------------------------
+# Added for: Sprint 5 -- the FastAPI backend (app/) serving the React
+# frontend. No new framework-risk dependency in the sense the ingestion/
+# LLM layers avoided (no LangChain) -- FastAPI + uvicorn is the standard,
+# minimal choice for a Python API server.
+# -----------------------------------------------------------------------
+fastapi>=0.110
+uvicorn[standard]>=0.27
+python-multipart>=0.0.9   # required by FastAPI for multipart file uploads (POST /api/claims)

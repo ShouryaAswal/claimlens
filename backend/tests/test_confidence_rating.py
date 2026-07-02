@@ -124,6 +124,40 @@ def test_missing_optional_field_rates_ok():
     assert result.requires_human_review is False
 
 
+def test_conflicting_status_is_always_high_risk_even_if_optional():
+    """The bug this guards against: merge_agent.merge_candidates() sets
+    value=None on a "conflicting" field (two documents disagreed and the
+    conflict was deliberately NOT auto-resolved). Before the fix, a
+    conflicting field fell into the same branch as a simply-missing field
+    -- and if the field was optional, it came out RiskLevel.OK with
+    requires_human_review=False, silently hiding a genuine two-document
+    contradiction. A conflict must always outrank "OK", required or not."""
+    claim = _make_claim("Some unrelated text.")
+    field_def = claim.lob_schema.get_section("remarks_overflow").fields[0]  # optional field
+    assert field_def.required is False
+    field = ExtractedField(
+        field_id=field_def.field_id, status="conflicting", value=None,
+        reason="2 independent candidates disagreed: ['100', '200'].",
+    )
+    result = rate_field(field, field_def, claim)
+    assert result.risk_level == RiskLevel.HIGH_RISK
+    assert result.requires_human_review is True
+    assert any("CONFLICTING" in r for r in result.reasons)
+
+
+def test_conflicting_status_on_required_field_also_high_risk():
+    claim = _make_claim("Repair Estimate: $4,250.00")
+    field_def = _numeric_field_def(claim)
+    assert field_def.required is True
+    field = ExtractedField(
+        field_id=field_def.field_id, status="conflicting", value=None,
+        reason="Citations disagree on the repair estimate amount.",
+    )
+    result = rate_field(field, field_def, claim)
+    assert result.risk_level == RiskLevel.HIGH_RISK
+    assert result.requires_human_review is True
+
+
 def test_field_with_value_but_no_evidence_citations_is_high_risk():
     claim = _make_claim("Repair Estimate: $4,250.00")
     field_def = _numeric_field_def(claim)

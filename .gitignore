@@ -5,8 +5,9 @@ __pycache__/
 venv/
 *.egg-info/
 .DS_Store
-outputs/*.json
+backend/outputs/*.json
 !outputs/.gitkeep
 .env
 augraphy_cache/
 backend/outputs/crops/*
+backend/outputs/**/claim_state.json
