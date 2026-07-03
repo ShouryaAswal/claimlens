@@ -9,8 +9,6 @@ backend/outputs/*.json
 !outputs/.gitkeep
 .env
 augraphy_cache/
-backend/outputs/**/crops/*
-backend/outputs/crops/*
-backend/outputs/claim_state.json
+backend/outputs/*
 frontend/node_modules/
 frontend/.vite/deps/

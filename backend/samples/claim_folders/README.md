@@ -15,3 +15,12 @@ Nine synthetic claim folders (3 per LOB) for exercising the full pipeline end-to
 | `health_conflicting_values/` | Health | Original vs. corrected itemized bill disagree on billed amount |
 
 Every folder also includes at least one irrelevant file under `irrelevant/` -- either off-topic but readable (an all-hands notes DOCX) or an unsupported extension (a stray .csv) -- to confirm the pipeline classifies/ignores noise rather than getting confused by it.
+<!-- long-form-scenarios -->
+
+Three additional folders (added by `scripts/generate_long_form_documents.py`) cover the manager's "20-30 page realistic document" requirement specifically -- each bundles a complete, clean claim (reusing the same mandatory-doc builders above) plus a long (22-30pp), densely-tabulated supplemental document under `supplemental/`, in both a clean digital-text version and an Augraphy-degraded, no-text-layer "scanned" version (heavy tier: folding, ink bleed, lighting gradient, bad-photocopy noise, low-quality JPEG) to exercise the OCR-fallback path across a genuinely long document.
+
+| Folder | LOB | Supplemental document |
+|---|---|---|
+| `auto_long_document/` | Auto | 25pp adjuster activity log / subrogation status / reserve worksheet |
+| `property_long_document/` | Property | 28pp room-by-room inspection + itemized contractor estimate |
+| `health_long_document/` | Health | 30pp UB-04-style itemized billing ledger + EOB summaries |
