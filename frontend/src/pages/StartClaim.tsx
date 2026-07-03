@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { AlertCircle, ArrowLeft, File, Loader2, UploadCloud, X } from "lucide-react";
+import { AlertCircle, ArrowLeft, File, FolderUp, Loader2, UploadCloud, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -14,24 +14,46 @@ import { useCreateClaim } from "@/hooks/useClaim";
  * dropdown here that the backend silently ignored would be worse than no
  * dropdown at all.
  */
+
+// Folder uploads (webkitdirectory) commonly drag in OS noise files that
+// aren't claim documents -- hide them from the picker entirely rather
+// than showing the adjuster a confusing "3 files" count that includes
+// .DS_Store. The backend drops these too (claims.py's _is_junk_upload),
+// this is just so the UI list matches what's actually submitted.
+const JUNK_NAMES = new Set([".ds_store", "thumbs.db", "desktop.ini"]);
+function isJunkFile(file: File) {
+  const name = file.name.toLowerCase();
+  return JUNK_NAMES.has(name) || name.startsWith("._");
+}
+
+/** Folder-selected files carry their subfolder path in the nonstandard
+ * (but universally supported) webkitRelativePath property -- fall back
+ * to the bare name for a normal file picker/drag-drop selection. */
+function relativePathOf(file: File): string {
+  return (file as File & { webkitRelativePath?: string }).webkitRelativePath || file.name;
+}
+
 export default function StartClaim() {
   const navigate = useNavigate();
-  const inputRef = useRef<HTMLInputElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [folderInputEl, setFolderInputEl] = useState<HTMLInputElement | null>(null);
   const [files, setFiles] = useState<File[]>([]);
   const [isDragging, setIsDragging] = useState(false);
   const { mutate, isPending, error } = useCreateClaim();
 
-  function addFiles(incoming: FileList | null) {
+  function addFiles(incoming: FileList | File[] | null) {
     if (!incoming) return;
     setFiles((prev) => {
-      const existingNames = new Set(prev.map((f) => f.name));
-      const additions = Array.from(incoming).filter((f) => !existingNames.has(f.name));
+      const existingKeys = new Set(prev.map(relativePathOf));
+      const additions = Array.from(incoming).filter(
+        (f) => !isJunkFile(f) && !existingKeys.has(relativePathOf(f)),
+      );
       return [...prev, ...additions];
     });
   }
 
-  function removeFile(name: string) {
-    setFiles((prev) => prev.filter((f) => f.name !== name));
+  function removeFile(key: string) {
+    setFiles((prev) => prev.filter((f) => relativePathOf(f) !== key));
   }
 
   function handleSubmit() {
@@ -54,6 +76,7 @@ export default function StartClaim() {
           <p className="mt-1 text-sm text-slate-500">
             Upload every document for this claim -- FNOL, photos, correspondence, estimates.
             ClaimLens will classify the line of business and extract fields automatically.
+            Nested subfolders (fnol/, evidence/, correspondence/) are supported and preserved.
           </p>
 
           <div
@@ -73,41 +96,67 @@ export default function StartClaim() {
             }}
           >
             <UploadCloud className="h-6 w-6 text-slate-400" />
-            <p className="text-sm text-slate-600">Drag files here, or</p>
-            <Button type="button" size="sm" variant="outline" onClick={() => inputRef.current?.click()}>
-              Browse files
-            </Button>
+            <p className="text-sm text-slate-600">Drag files or a folder here, or</p>
+            <div className="flex gap-2">
+              <Button type="button" size="sm" variant="outline" onClick={() => fileInputRef.current?.click()}>
+                <File className="h-3.5 w-3.5" />
+                Browse files
+              </Button>
+              <Button type="button" size="sm" variant="outline" onClick={() => folderInputEl?.click()}>
+                <FolderUp className="h-3.5 w-3.5" />
+                Browse folder
+              </Button>
+            </div>
             <input
-              ref={inputRef}
+              ref={fileInputRef}
               type="file"
               multiple
               className="hidden"
               onChange={(e) => addFiles(e.target.files)}
               accept=".pdf,.docx,.pptx,.png,.jpg,.jpeg,.html,.htm"
             />
+            {/* webkitdirectory has no React prop -- set as raw DOM attributes via ref callback. */}
+            <input
+              ref={(node) => {
+                setFolderInputEl(node);
+                if (node) {
+                  node.setAttribute("webkitdirectory", "");
+                  node.setAttribute("directory", "");
+                }
+              }}
+              type="file"
+              multiple
+              className="hidden"
+              onChange={(e) => addFiles(e.target.files)}
+            />
           </div>
 
           {files.length > 0 && (
-            <ul className="mt-4 flex flex-col gap-1.5">
-              {files.map((file) => (
-                <li
-                  key={file.name}
-                  className="flex items-center justify-between gap-2 rounded-md border border-slate-200 bg-white px-3 py-2 text-sm"
-                >
-                  <span className="flex min-w-0 items-center gap-2">
-                    <File className="h-3.5 w-3.5 shrink-0 text-slate-400" />
-                    <span className="truncate text-ink-900">{file.name}</span>
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() => removeFile(file.name)}
-                    className="shrink-0 text-slate-400 hover:text-risk-high"
-                    aria-label={`Remove ${file.name}`}
+            <ul className="mt-4 flex max-h-56 flex-col gap-1.5 overflow-y-auto">
+              {files.map((file) => {
+                const key = relativePathOf(file);
+                return (
+                  <li
+                    key={key}
+                    className="flex items-center justify-between gap-2 rounded-md border border-slate-200 bg-white px-3 py-2 text-sm"
                   >
-                    <X className="h-3.5 w-3.5" />
-                  </button>
-                </li>
-              ))}
+                    <span className="flex min-w-0 items-center gap-2">
+                      <File className="h-3.5 w-3.5 shrink-0 text-slate-400" />
+                      <span className="truncate text-ink-900" title={key}>
+                        {key}
+                      </span>
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => removeFile(key)}
+                      className="shrink-0 text-slate-400 hover:text-risk-high"
+                      aria-label={`Remove ${key}`}
+                    >
+                      <X className="h-3.5 w-3.5" />
+                    </button>
+                  </li>
+                );
+              })}
             </ul>
           )}
 

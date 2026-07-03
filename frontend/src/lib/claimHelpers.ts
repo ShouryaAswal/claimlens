@@ -1,5 +1,9 @@
 import type { ClaimState, ContentBlock, DocumentRecord } from "@/types/claim";
 
+export function getDocumentById(claim: ClaimState, docId: string): DocumentRecord | null {
+  return claim.documents.find((doc) => doc.doc_id === docId) ?? null;
+}
+
 export function findContentBlock(claim: ClaimState, blockId: string): ContentBlock | null {
   for (const doc of claim.documents) {
     const block = doc.blocks.find((b) => b.block_id === blockId);

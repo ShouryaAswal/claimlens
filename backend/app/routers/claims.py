@@ -31,6 +31,16 @@ from core.store import ClaimNotFoundError, ClaimStore, PipelineStatus
 logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/api/claims", tags=["claims"])
 
+# OS/filesystem noise that folder uploads commonly drag in -- not a real
+# claim document, so it's dropped before it ever reaches the pipeline
+# rather than showing up as a confusing "INGESTION FAILED" entry.
+_JUNK_FILENAMES = {".ds_store", "thumbs.db", "desktop.ini"}
+
+
+def _is_junk_upload(filename: str) -> bool:
+    name = Path(filename).name.lower()
+    return name in _JUNK_FILENAMES or name.startswith("._")
+
 
 def _save_uploads_to_temp(claim_id: str, files: list[UploadFile]) -> list[str]:
     """agents.ingestion.dispatcher.ingest() takes local file paths (or
@@ -39,15 +49,39 @@ def _save_uploads_to_temp(claim_id: str, files: list[UploadFile]) -> list[str]:
     The temp dir is namespaced by claim_id and left in place (not cleaned
     up) since agents/provenance_agent.py re-opens the ORIGINAL source file
     to render crops later in the pipeline -- deleting it after ingestion
-    would break crop generation for every PDF/image block."""
+    would break crop generation for every PDF/image block.
+
+    Folder uploads (frontend sends each file's name as its
+    webkitRelativePath, e.g. "evidence/photo1.jpg") are preserved as
+    nested directories under upload_root rather than flattened to a bare
+    filename. Flattening would silently overwrite one file with another
+    of the same name from a different subfolder -- a real, likely case
+    for a claim packet with fnol/, evidence/, correspondence/ each
+    containing their own "notes.docx" or "photo1.jpg".
+    """
     upload_root = Path(tempfile.gettempdir()) / "claimlens_uploads" / claim_id
     upload_root.mkdir(parents=True, exist_ok=True)
     saved_paths: list[str] = []
     for f in files:
-        # A bare filename only -- an uploaded filename is untrusted input,
-        # never trust it as a path.
-        safe_name = Path(f.filename or "upload").name
-        dest = upload_root / safe_name
+        # An uploaded filename (which may carry a relative path for
+        # folder uploads) is untrusted input -- strip any ".."/absolute
+        # components before joining it onto upload_root, then recreate
+        # only the remaining subdirectory structure.
+        raw_name = f.filename or "upload"
+        rel_parts = [
+            part for part in Path(raw_name).parts
+            if part not in ("", ".", "..") and not Path(part).is_absolute()
+        ]
+        safe_rel_path = Path(*rel_parts) if rel_parts else Path("upload")
+        dest = upload_root / safe_rel_path
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        # Two different claims' folders can legitimately both contain
+        # e.g. "evidence/photo1.jpg" flattened from unrelated top-level
+        # folder names the browser doesn't expose -- so still guard
+        # against a same-claim, same-relative-path collision explicitly
+        # rather than silently overwriting.
+        if dest.exists():
+            dest = dest.with_name(f"{uuid.uuid4().hex[:6]}_{dest.name}")
         with dest.open("wb") as out:
             shutil.copyfileobj(f.file, out)
         saved_paths.append(str(dest))
@@ -69,6 +103,7 @@ async def create_claim(
     files: list[UploadFile],
     store: ClaimStore = Depends(get_store),
 ) -> dict:
+    files = [f for f in files if not _is_junk_upload(f.filename or "")]
     if not files:
         raise HTTPException(status_code=400, detail="At least one file is required.")
 

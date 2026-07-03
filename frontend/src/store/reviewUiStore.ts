@@ -7,11 +7,21 @@ import { create } from "zustand";
  * cache (see hooks/useClaim.ts) -- if you find yourself wanting to put
  * server data in here, stop, that's what the query cache is for.
  */
+interface DocumentViewerState {
+  docId: string;
+  page: number;
+  /** Block to highlight in gold when the page renders -- set when opened
+   * from a crop click; absent when opened from the Documents pane. */
+  highlightBlockId?: string;
+}
+
 interface ReviewUiState {
   selectedFieldId: string | null;
   /** Index into the selected field's evidence_block_ids. */
   activeEvidenceIndex: number;
   overrideModalFieldId: string | null;
+  documentViewer: DocumentViewerState | null;
+  activeTab: "fields" | "documents";
 
   selectField: (fieldId: string | null) => void;
   setActiveEvidenceIndex: (index: number) => void;
@@ -19,12 +29,18 @@ interface ReviewUiState {
   previousEvidence: (evidenceCount: number) => void;
   openOverrideModal: (fieldId: string) => void;
   closeOverrideModal: () => void;
+  openDocumentViewer: (docId: string, page: number, highlightBlockId?: string) => void;
+  setDocumentViewerPage: (page: number) => void;
+  closeDocumentViewer: () => void;
+  setActiveTab: (tab: "fields" | "documents") => void;
 }
 
 export const useReviewUiStore = create<ReviewUiState>((set) => ({
   selectedFieldId: null,
   activeEvidenceIndex: 0,
   overrideModalFieldId: null,
+  documentViewer: null,
+  activeTab: "fields",
 
   selectField: (fieldId) => set({ selectedFieldId: fieldId, activeEvidenceIndex: 0 }),
 
@@ -46,4 +62,14 @@ export const useReviewUiStore = create<ReviewUiState>((set) => ({
 
   openOverrideModal: (fieldId) => set({ overrideModalFieldId: fieldId }),
   closeOverrideModal: () => set({ overrideModalFieldId: null }),
+
+  openDocumentViewer: (docId, page, highlightBlockId) =>
+    set({ documentViewer: { docId, page, highlightBlockId } }),
+  setDocumentViewerPage: (page) =>
+    set((state) =>
+      state.documentViewer ? { documentViewer: { ...state.documentViewer, page } } : {},
+    ),
+  closeDocumentViewer: () => set({ documentViewer: null }),
+
+  setActiveTab: (tab) => set({ activeTab: tab }),
 }));

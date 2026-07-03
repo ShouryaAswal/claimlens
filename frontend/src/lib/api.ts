@@ -49,7 +49,18 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
 
 export function createClaim(files: File[]): Promise<{ claim_id: string }> {
   const formData = new FormData();
-  for (const file of files) formData.append("files", file);
+  for (const file of files) {
+    // Folder uploads (see StartClaim.tsx's webkitdirectory input) carry
+    // their subfolder path in webkitRelativePath (e.g.
+    // "ClaimFolder/evidence/photo1.jpg"). Passing that as the upload
+    // filename lets the backend preserve it under
+    // claimlens_uploads/{claim_id}/... (see claims.py's
+    // _save_uploads_to_temp) instead of flattening every file to its
+    // bare name, which would silently collide same-named files from
+    // different subfolders.
+    const relativePath = (file as File & { webkitRelativePath?: string }).webkitRelativePath;
+    formData.append("files", file, relativePath || file.name);
+  }
   return request("/api/claims", { method: "POST", body: formData });
 }
 

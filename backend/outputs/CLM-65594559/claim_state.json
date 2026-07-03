@@ -1,0 +1,1248 @@
+{
+  "claim": {
+    "claim_id": "CLM-65594559",
+    "lob": "health",
+    "lob_confidence": 0.99,
+    "documents": [
+      {
+        "doc_id": "doc_6599af6b",
+        "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\pre_authorization\\pre_authorization.docx",
+        "source_format": "docx",
+        "page_count": null,
+        "doc_type": "pre_authorization",
+        "blocks": [
+          {
+            "block_id": "doc_6599af6b_para_b001",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\pre_authorization\\pre_authorization.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_0",
+            "text": "Pre-Authorization Approval",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_6599af6b_para_b002",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\pre_authorization\\pre_authorization.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_1",
+            "text": "Pre-Authorization Number: PA-2026-902247",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_6599af6b_para_b003",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\pre_authorization\\pre_authorization.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_2",
+            "text": "Patient Name: Renee Ashworth",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_6599af6b_para_b004",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\pre_authorization\\pre_authorization.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_3",
+            "text": "Member ID: HLX-1180-4423",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_6599af6b_para_b005",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\pre_authorization\\pre_authorization.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_4",
+            "text": "Date of Birth: 02/27/1993",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_6599af6b_para_b006",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\pre_authorization\\pre_authorization.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_5",
+            "text": "Relationship to Subscriber: Spouse",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_6599af6b_para_b007",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\pre_authorization\\pre_authorization.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_6",
+            "text": "Provider Name: Northgate Surgical Center",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_6599af6b_para_b008",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\pre_authorization\\pre_authorization.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_7",
+            "text": "Provider NPI: 1558820047",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_6599af6b_para_b009",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\pre_authorization\\pre_authorization.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_8",
+            "text": "Network Status: In-network",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_6599af6b_para_b010",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\pre_authorization\\pre_authorization.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_9",
+            "text": "Service Requested: Laparoscopic appendectomy.",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          }
+        ],
+        "warnings": [],
+        "ingested_at": "2026-07-03T06:53:17.011055Z"
+      },
+      {
+        "doc_id": "doc_3a2d4fbd",
+        "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\itemized_bill\\itemized_bill_corrected.docx",
+        "source_format": "docx",
+        "page_count": null,
+        "doc_type": "itemized_bill",
+        "blocks": [
+          {
+            "block_id": "doc_3a2d4fbd_para_b001",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\itemized_bill\\itemized_bill_corrected.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_0",
+            "text": "Itemized Billing Statement - Corrected",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_3a2d4fbd_para_b002",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\itemized_bill\\itemized_bill_corrected.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_1",
+            "text": "Provider Name: Northgate Surgical Center",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_3a2d4fbd_para_b003",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\itemized_bill\\itemized_bill_corrected.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_2",
+            "text": "Patient Name: Renee Ashworth",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_3a2d4fbd_para_b004",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\itemized_bill\\itemized_bill_corrected.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_3",
+            "text": "Billed Amount: $22,875.00",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_3a2d4fbd_para_b005",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\itemized_bill\\itemized_bill_corrected.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_4",
+            "text": "Co-Pay Amount: $150.00",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_3a2d4fbd_para_b006",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\itemized_bill\\itemized_bill_corrected.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_5",
+            "text": "Note: Corrected statement -- original omitted overnight observation facility charges.",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          }
+        ],
+        "warnings": [],
+        "ingested_at": "2026-07-03T06:53:17.095651Z"
+      },
+      {
+        "doc_id": "doc_681b2d3f",
+        "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\itemized_bill\\itemized_bill_facility.docx",
+        "source_format": "docx",
+        "page_count": null,
+        "doc_type": "itemized_bill",
+        "blocks": [
+          {
+            "block_id": "doc_681b2d3f_para_b001",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\itemized_bill\\itemized_bill_facility.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_0",
+            "text": "Itemized Billing Statement - Facility",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_681b2d3f_para_b002",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\itemized_bill\\itemized_bill_facility.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_1",
+            "text": "Provider Name: Northgate Surgical Center",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_681b2d3f_para_b003",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\itemized_bill\\itemized_bill_facility.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_2",
+            "text": "Patient Name: Renee Ashworth",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_681b2d3f_para_b004",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\itemized_bill\\itemized_bill_facility.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_3",
+            "text": "Billed Amount: $19,340.00",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_681b2d3f_para_b005",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\itemized_bill\\itemized_bill_facility.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_4",
+            "text": "Co-Pay Amount: $150.00",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          }
+        ],
+        "warnings": [],
+        "ingested_at": "2026-07-03T06:53:17.174982Z"
+      },
+      {
+        "doc_id": "doc_5bedcb36",
+        "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\irrelevant\\office_allhands_notes.docx",
+        "source_format": "docx",
+        "page_count": null,
+        "doc_type": "correspondence",
+        "blocks": [
+          {
+            "block_id": "doc_5bedcb36_para_b001",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\irrelevant\\office_allhands_notes.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_0",
+            "text": "Q3 All-Hands Notes",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_5bedcb36_para_b002",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\irrelevant\\office_allhands_notes.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_1",
+            "text": "Thanks everyone for joining the all-hands. Kitchen renovation on the 3rd floor starts Monday -- please use the 2nd floor kitchen until further notice.",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_5bedcb36_para_b003",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\irrelevant\\office_allhands_notes.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_2",
+            "text": "Open enrollment for benefits closes on the 15th. Reach out to HR with questions.",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_5bedcb36_para_b004",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\irrelevant\\office_allhands_notes.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_3",
+            "text": "Reminder: badge access to the parking garage now requires the new app.",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          }
+        ],
+        "warnings": [],
+        "ingested_at": "2026-07-03T06:53:17.253319Z"
+      },
+      {
+        "doc_id": "doc_7a246f94",
+        "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\discharge_summary\\discharge_summary.docx",
+        "source_format": "docx",
+        "page_count": null,
+        "doc_type": "discharge_summary",
+        "blocks": [
+          {
+            "block_id": "doc_7a246f94_para_b001",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\discharge_summary\\discharge_summary.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_0",
+            "text": "Discharge Summary",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_7a246f94_para_b002",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\discharge_summary\\discharge_summary.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_1",
+            "text": "Discharge Summary Reference: DS-2026-902247",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_7a246f94_para_b003",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\discharge_summary\\discharge_summary.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_2",
+            "text": "Patient Name: Renee Ashworth",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_7a246f94_para_b004",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\discharge_summary\\discharge_summary.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_3",
+            "text": "Admission Date: 07/11/2026",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_7a246f94_para_b005",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\discharge_summary\\discharge_summary.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_4",
+            "text": "Discharge Date: 07/12/2026",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_7a246f94_para_b006",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\discharge_summary\\discharge_summary.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_5",
+            "text": "Date of Service: 07/11/2026",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_7a246f94_para_b007",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\discharge_summary\\discharge_summary.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_6",
+            "text": "ICD-10 Codes: K35.80",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_7a246f94_para_b008",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\discharge_summary\\discharge_summary.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_7",
+            "text": "CPT Codes: 44970",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_7a246f94_para_b009",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\discharge_summary\\discharge_summary.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_8",
+            "text": "Diagnosis Description: Unspecified acute appendicitis.",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_7a246f94_para_b010",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-65594559\\health_conflicting_values\\discharge_summary\\discharge_summary.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_9",
+            "text": "Procedure: Laparoscopic appendectomy, uncomplicated. Overnight observation for post-operative monitoring, discharged the following morning.",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          }
+        ],
+        "warnings": [],
+        "ingested_at": "2026-07-03T06:53:17.330660Z"
+      }
+    ],
+    "lob_schema": {
+      "lob": "health",
+      "source_concept": "Field concepts inspired by CMS-1500 (professional claims) and UB-04 (institutional claims) -- NOT ACORD. ACORD is a P&C standard (Auto/Property); standard health claims use NUCC/NUBC-governed forms instead. Our own field names/JSON structure, not a reproduction of either form.",
+      "mandatory_doc_types": [
+        "pre_authorization",
+        "discharge_summary",
+        "itemized_bill"
+      ],
+      "sections": [
+        {
+          "section_id": "patient_member_info",
+          "fields": [
+            {
+              "field_id": "patient_name",
+              "label": "Patient Name",
+              "required": true,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "insured name"
+              ]
+            },
+            {
+              "field_id": "member_id",
+              "label": "Member / Subscriber ID",
+              "required": true,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "insurance id",
+                "policy id"
+              ]
+            },
+            {
+              "field_id": "date_of_birth",
+              "label": "Date of Birth",
+              "required": false,
+              "field_type": "date",
+              "description": null,
+              "synonyms": [
+                "dob"
+              ]
+            },
+            {
+              "field_id": "relationship_to_subscriber",
+              "label": "Relationship to Subscriber",
+              "required": false,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "self, spouse, child"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": "provider_info",
+          "fields": [
+            {
+              "field_id": "provider_name",
+              "label": "Provider / Facility Name",
+              "required": true,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "hospital name",
+                "physician name"
+              ]
+            },
+            {
+              "field_id": "provider_npi",
+              "label": "Provider NPI",
+              "required": false,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "national provider identifier"
+              ]
+            },
+            {
+              "field_id": "network_status",
+              "label": "In-Network / Out-of-Network",
+              "required": false,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "network status"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": "service_info",
+          "fields": [
+            {
+              "field_id": "admission_date",
+              "label": "Admission Date",
+              "required": true,
+              "field_type": "date",
+              "description": null,
+              "synonyms": [
+                "date of admission"
+              ]
+            },
+            {
+              "field_id": "discharge_date",
+              "label": "Discharge Date",
+              "required": false,
+              "field_type": "date",
+              "description": null,
+              "synonyms": [
+                "date of discharge"
+              ]
+            },
+            {
+              "field_id": "date_of_service",
+              "label": "Date(s) of Service",
+              "required": false,
+              "field_type": "date",
+              "description": null,
+              "synonyms": [
+                "service date"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": "diagnosis_procedure",
+          "fields": [
+            {
+              "field_id": "icd10_codes",
+              "label": "ICD-10 Diagnosis Code(s)",
+              "required": true,
+              "field_type": "code",
+              "description": null,
+              "synonyms": [
+                "diagnosis code"
+              ]
+            },
+            {
+              "field_id": "cpt_codes",
+              "label": "CPT / Procedure Code(s)",
+              "required": false,
+              "field_type": "code",
+              "description": null,
+              "synonyms": [
+                "procedure code"
+              ]
+            },
+            {
+              "field_id": "diagnosis_description",
+              "label": "Diagnosis Description",
+              "required": false,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "condition",
+                "diagnosis"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": "official_records",
+          "fields": [
+            {
+              "field_id": "pre_authorization_number",
+              "label": "Pre-Authorization Number",
+              "required": false,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "pre-auth number"
+              ]
+            },
+            {
+              "field_id": "discharge_summary_reference",
+              "label": "Discharge Summary Reference",
+              "required": false,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "discharge note"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": "financials",
+          "fields": [
+            {
+              "field_id": "billed_amount",
+              "label": "Total Billed Amount",
+              "required": true,
+              "field_type": "number",
+              "description": null,
+              "synonyms": [
+                "itemized bill total"
+              ]
+            },
+            {
+              "field_id": "co_pay_amount",
+              "label": "Co-Pay Amount",
+              "required": false,
+              "field_type": "number",
+              "description": null,
+              "synonyms": [
+                "co-pay"
+              ]
+            },
+            {
+              "field_id": "allowed_amount",
+              "label": "Allowed / Approved Amount",
+              "required": false,
+              "field_type": "number",
+              "description": null,
+              "synonyms": [
+                "allowed charges"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": "remarks_overflow",
+          "fields": [
+            {
+              "field_id": "additional_remarks",
+              "label": "Additional Remarks",
+              "required": false,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "remarks",
+                "notes"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "extracted_fields": {
+      "patient_name": {
+        "field_id": "patient_name",
+        "value": "Renee Ashworth",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_6599af6b_para_b003",
+          "doc_3a2d4fbd_para_b003",
+          "doc_681b2d3f_para_b003",
+          "doc_7a246f94_para_b003"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "member_id": {
+        "field_id": "member_id",
+        "value": "HLX-1180-4423",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_6599af6b_para_b004"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "date_of_birth": {
+        "field_id": "date_of_birth",
+        "value": "02/27/1993",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_6599af6b_para_b005"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "relationship_to_subscriber": {
+        "field_id": "relationship_to_subscriber",
+        "value": "Spouse",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_6599af6b_para_b006"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "provider_name": {
+        "field_id": "provider_name",
+        "value": "Northgate Surgical Center",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_6599af6b_para_b007",
+          "doc_3a2d4fbd_para_b002",
+          "doc_681b2d3f_para_b002"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "provider_npi": {
+        "field_id": "provider_npi",
+        "value": "1558820047",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_6599af6b_para_b008"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "network_status": {
+        "field_id": "network_status",
+        "value": "In-network",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_6599af6b_para_b009"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "admission_date": {
+        "field_id": "admission_date",
+        "value": "07/11/2026",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_7a246f94_para_b004"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "discharge_date": {
+        "field_id": "discharge_date",
+        "value": "07/12/2026",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_7a246f94_para_b005"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "date_of_service": {
+        "field_id": "date_of_service",
+        "value": "07/11/2026",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_7a246f94_para_b006"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "icd10_codes": {
+        "field_id": "icd10_codes",
+        "value": "K35.80",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_7a246f94_para_b007"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "cpt_codes": {
+        "field_id": "cpt_codes",
+        "value": "44970",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_7a246f94_para_b008"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "diagnosis_description": {
+        "field_id": "diagnosis_description",
+        "value": "Unspecified acute appendicitis.",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_7a246f94_para_b009"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "pre_authorization_number": {
+        "field_id": "pre_authorization_number",
+        "value": "PA-2026-902247",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_6599af6b_para_b002"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "discharge_summary_reference": {
+        "field_id": "discharge_summary_reference",
+        "value": "DS-2026-902247",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_7a246f94_para_b002"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "billed_amount": {
+        "field_id": "billed_amount",
+        "value": "22875.00",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_3a2d4fbd_para_b004"
+        ],
+        "status": "found",
+        "reason": "The corrected itemized billing statement provides the final billed amount."
+      },
+      "co_pay_amount": {
+        "field_id": "co_pay_amount",
+        "value": "150.00",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_3a2d4fbd_para_b005"
+        ],
+        "status": "found",
+        "reason": "The co-pay amount is explicitly stated in the corrected itemized billing statement."
+      },
+      "allowed_amount": {
+        "field_id": "allowed_amount",
+        "value": null,
+        "confidence": 0.0,
+        "evidence_block_ids": [],
+        "status": "missing",
+        "reason": "The allowed amount is not mentioned in any of the provided documents."
+      },
+      "additional_remarks": {
+        "field_id": "additional_remarks",
+        "value": "Corrected statement -- original omitted overnight observation facility charges.",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_3a2d4fbd_para_b006"
+        ],
+        "status": "found",
+        "reason": "The note in the corrected itemized billing statement serves as the additional remark."
+      }
+    },
+    "field_verifications": {
+      "patient_name": {
+        "field_id": "patient_name",
+        "match_method": "fuzzy_text",
+        "match_score": 1.0,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 1.0,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 1.00 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "member_id": {
+        "field_id": "member_id",
+        "match_method": "fuzzy_text",
+        "match_score": 0.7027027027027027,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.7027,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 0.70 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "date_of_birth": {
+        "field_id": "date_of_birth",
+        "match_method": "exact_date",
+        "match_score": 1.0,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 1.0,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Exact date match: 1993-02-27 found in cited evidence."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "relationship_to_subscriber": {
+        "field_id": "relationship_to_subscriber",
+        "match_method": "fuzzy_text",
+        "match_score": 0.8333333333333334,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.8333,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 0.83 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "provider_name": {
+        "field_id": "provider_name",
+        "match_method": "fuzzy_text",
+        "match_score": 0.96,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.96,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 0.96 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "provider_npi": {
+        "field_id": "provider_npi",
+        "match_method": "fuzzy_text",
+        "match_score": 0.6,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.6,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 0.60 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "network_status": {
+        "field_id": "network_status",
+        "match_method": "fuzzy_text",
+        "match_score": 0.9,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.9,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 0.90 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "admission_date": {
+        "field_id": "admission_date",
+        "match_method": "exact_date",
+        "match_score": 1.0,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 1.0,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Exact date match: 2026-07-11 found in cited evidence."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "discharge_date": {
+        "field_id": "discharge_date",
+        "match_method": "exact_date",
+        "match_score": 1.0,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 1.0,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Exact date match: 2026-07-12 found in cited evidence."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "date_of_service": {
+        "field_id": "date_of_service",
+        "match_method": "exact_date",
+        "match_score": 1.0,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 1.0,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Exact date match: 2026-07-11 found in cited evidence."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "icd10_codes": {
+        "field_id": "icd10_codes",
+        "match_method": "exact_code",
+        "match_score": 1.0,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 1.0,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Exact code match: 'K35.80' found verbatim (case/whitespace-insensitive) in cited evidence."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "cpt_codes": {
+        "field_id": "cpt_codes",
+        "match_method": "exact_code",
+        "match_score": 1.0,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 1.0,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Exact code match: '44970' found verbatim (case/whitespace-insensitive) in cited evidence."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "diagnosis_description": {
+        "field_id": "diagnosis_description",
+        "match_method": "fuzzy_text",
+        "match_score": 0.7419354838709677,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.7419,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 0.74 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "pre_authorization_number": {
+        "field_id": "pre_authorization_number",
+        "match_method": "fuzzy_text",
+        "match_score": 0.6428571428571429,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.6429,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 0.64 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "discharge_summary_reference": {
+        "field_id": "discharge_summary_reference",
+        "match_method": "fuzzy_text",
+        "match_score": 0.9285714285714286,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.9286,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 0.93 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "billed_amount": {
+        "field_id": "billed_amount",
+        "match_method": "exact_numeric",
+        "match_score": 1.0,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 1.0,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Exact numeric match: 22875.00 found verbatim in cited evidence."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "co_pay_amount": {
+        "field_id": "co_pay_amount",
+        "match_method": "exact_numeric",
+        "match_score": 1.0,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 1.0,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Exact numeric match: 150.00 found verbatim in cited evidence."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "allowed_amount": {
+        "field_id": "allowed_amount",
+        "match_method": "no_evidence",
+        "match_score": 0.0,
+        "ocr_confidence_avg": 0.0,
+        "llm_confidence": 0.0,
+        "composite_confidence": 0.0,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Field was not found in the claim corpus. This is an optional field."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "additional_remarks": {
+        "field_id": "additional_remarks",
+        "match_method": "fuzzy_text",
+        "match_score": 0.9634146341463414,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.9634,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 0.96 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      }
+    },
+    "missing_mandatory_docs": [],
+    "triage": {
+      "tier": "stp_candidate",
+      "score": 15,
+      "forced_review": false,
+      "reasons": [
+        "Claim amount 22875.00 meets or exceeds the health high-value threshold (15000) -- recommend senior/extra review."
+      ],
+      "high_risk_field_ids": []
+    },
+    "created_at": "2026-07-03T06:53:16.903141Z"
+  },
+  "status": "complete",
+  "error": null,
+  "summary": "Claim CLM-65594559 (HEALTH): 18/19 fields extracted (6/6 required fields found).\nAll mandatory document types are present.\nTriage verdict: STP CANDIDATE (composite score 15).\nNo fields flagged for review.",
+  "review_queue": [],
+  "review_queue_counts": {
+    "total": 0,
+    "high_risk": 0,
+    "needs_review": 0,
+    "no_visual_evidence": 0
+  },
+  "adjuster_decision": "approved",
+  "updated_at": "2026-07-03T06:56:01.932786Z"
+}

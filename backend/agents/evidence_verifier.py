@@ -74,7 +74,16 @@ class MatchResult:
 def _extract_numeric_candidates(text: str) -> list[Decimal]:
     """Pulls every number-looking substring out of a text blob (a block of
     OCR'd text often contains several numbers -- line item amounts, dates,
-    counts -- and the one we want could be any of them)."""
+    counts -- and the one we want could be any of them).
+
+    `text` is coerced to str defensively: ExtractedField.value for a
+    "number" field can legitimately already be a Python int/float by the
+    time it gets here (Pydantic's coerce_value validator turns 4250.0
+    into 4250), and both callers of this function (claims.py's
+    list_claims primary_amount lookup, and the numeric match check below)
+    pass that value straight through without stringifying it first.
+    """
+    text = str(text)
     candidates: list[Decimal] = []
     for raw in _NUMERIC_RE.findall(text):
         cleaned = raw.replace("$", "").replace(",", "").strip()

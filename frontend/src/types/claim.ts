@@ -79,6 +79,10 @@ export interface FieldVerification {
   llm_verification: LLMVerificationResult | null;
   /** URLs already rewritten by core/pipeline.py to `/crops/{claim_id}/{block_id}.png` */
   crop_paths: string[];
+  /** Set only after a human override -- the doc_id the adjuster says they
+   * actually found the value in. Distinct from the model's own
+   * evidence_block_ids on purpose (see app/routers/review.py). */
+  adjuster_source_doc_id: string | null;
 }
 
 export interface ReviewQueueItem {
@@ -240,6 +244,7 @@ export interface PageBlock {
 
 export interface FieldOverrideRequest {
   value: string;
+  source_document_id: string;
   note?: string | null;
 }
 

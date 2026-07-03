@@ -1,0 +1,1498 @@
+{
+  "claim": {
+    "claim_id": "CLM-aee68f05",
+    "lob": "auto",
+    "lob_confidence": 0.99,
+    "documents": [
+      {
+        "doc_id": "doc_f24395bb",
+        "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\repair_estimate\\repair_estimate.docx",
+        "source_format": "docx",
+        "page_count": null,
+        "doc_type": "repair_estimate",
+        "blocks": [
+          {
+            "block_id": "doc_f24395bb_para_b001",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\repair_estimate\\repair_estimate.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_0",
+            "text": "Springfield Auto Body - Repair Estimate",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_f24395bb_para_b002",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\repair_estimate\\repair_estimate.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_1",
+            "text": "Estimate prepared for: Maria Gonzalez, 2023 Honda Accord",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_f24395bb_para_b003",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\repair_estimate\\repair_estimate.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_2",
+            "text": "Repair Estimate Amount: $4,250.00",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_f24395bb_para_b004",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\repair_estimate\\repair_estimate.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_3",
+            "text": "Scope: Replace rear bumper cover, repair quarter panel, blend paint.",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          }
+        ],
+        "warnings": [],
+        "ingested_at": "2026-07-03T06:41:21.180602Z"
+      },
+      {
+        "doc_id": "doc_998555fa",
+        "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\policy_declaration\\policy_declaration.docx",
+        "source_format": "docx",
+        "page_count": null,
+        "doc_type": "policy_declaration",
+        "blocks": [
+          {
+            "block_id": "doc_998555fa_para_b001",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\policy_declaration\\policy_declaration.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_0",
+            "text": "Meridian Mutual Insurance - Policy Declarations",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_998555fa_para_b002",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\policy_declaration\\policy_declaration.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_1",
+            "text": "Policy Number: AUTO-7734-9021",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_998555fa_para_b003",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\policy_declaration\\policy_declaration.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_2",
+            "text": "Named Insured: Maria Gonzalez",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_998555fa_para_b004",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\policy_declaration\\policy_declaration.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_3",
+            "text": "Policy Effective Dates: 01/01/2026 to 01/01/2027",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_998555fa_para_b005",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\policy_declaration\\policy_declaration.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_4",
+            "text": "Coverage: Comprehensive, Collision, Liability",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          }
+        ],
+        "warnings": [],
+        "ingested_at": "2026-07-03T06:41:21.250554Z"
+      },
+      {
+        "doc_id": "doc_19ab54a1",
+        "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\police_report\\police_report.docx",
+        "source_format": "docx",
+        "page_count": null,
+        "doc_type": "police_report",
+        "blocks": [
+          {
+            "block_id": "doc_19ab54a1_para_b001",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\police_report\\police_report.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_0",
+            "text": "Springfield Police Department - Incident Report",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_19ab54a1_para_b002",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\police_report\\police_report.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_1",
+            "text": "Police Report Number: SPD-2026-011824",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_19ab54a1_para_b003",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\police_report\\police_report.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_2",
+            "text": "Reporting Department: Springfield Police Department, Traffic Division",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_19ab54a1_para_b004",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\police_report\\police_report.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_3",
+            "text": "Date of Loss: 03/14/2026, approximately 5:45 PM",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_19ab54a1_para_b005",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\police_report\\police_report.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_4",
+            "text": "Location: 5th Ave and Cedar St, Springfield, IL",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_19ab54a1_para_b006",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\police_report\\police_report.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_5",
+            "text": "Narrative: Vehicle 2 (Reid) failed to stop for traffic signal and struck the rear of Vehicle 1 (Gonzalez), which was stationary. No injuries reported by either party at the scene.",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          }
+        ],
+        "warnings": [],
+        "ingested_at": "2026-07-03T06:41:21.321059Z"
+      },
+      {
+        "doc_id": "doc_af01a52a",
+        "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\irrelevant\\office_allhands_notes.docx",
+        "source_format": "docx",
+        "page_count": null,
+        "doc_type": "correspondence",
+        "blocks": [
+          {
+            "block_id": "doc_af01a52a_para_b001",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\irrelevant\\office_allhands_notes.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_0",
+            "text": "Q3 All-Hands Notes",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_af01a52a_para_b002",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\irrelevant\\office_allhands_notes.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_1",
+            "text": "Thanks everyone for joining the all-hands. Kitchen renovation on the 3rd floor starts Monday -- please use the 2nd floor kitchen until further notice.",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_af01a52a_para_b003",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\irrelevant\\office_allhands_notes.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_2",
+            "text": "Open enrollment for benefits closes on the 15th. Reach out to HR with questions.",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_af01a52a_para_b004",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\irrelevant\\office_allhands_notes.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_3",
+            "text": "Reminder: badge access to the parking garage now requires the new app.",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          }
+        ],
+        "warnings": [],
+        "ingested_at": "2026-07-03T06:41:21.457458Z"
+      },
+      {
+        "doc_id": "doc_4b52e625",
+        "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\fnol\\notice_of_loss.docx",
+        "source_format": "docx",
+        "page_count": null,
+        "doc_type": "correspondence",
+        "blocks": [
+          {
+            "block_id": "doc_4b52e625_para_b001",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\fnol\\notice_of_loss.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_0",
+            "text": "Notice of Loss - Automobile",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_4b52e625_para_b002",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\fnol\\notice_of_loss.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_1",
+            "text": "Policy Number: AUTO-7734-9021",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_4b52e625_para_b003",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\fnol\\notice_of_loss.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_2",
+            "text": "Carrier Name: Meridian Mutual Insurance",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_4b52e625_para_b004",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\fnol\\notice_of_loss.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_3",
+            "text": "Policy Effective Dates: 01/01/2026 to 01/01/2027",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_4b52e625_para_b005",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\fnol\\notice_of_loss.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_4",
+            "text": "Date of Loss: 03/14/2026",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_4b52e625_para_b006",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\fnol\\notice_of_loss.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_5",
+            "text": "Time of Loss: approximately 5:45 PM",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_4b52e625_para_b007",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\fnol\\notice_of_loss.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_6",
+            "text": "Loss Location: Intersection of 5th Ave and Cedar St, Springfield, IL",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_4b52e625_para_b008",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\fnol\\notice_of_loss.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_7",
+            "text": "Loss Description: Insured vehicle was struck on the rear passenger side while stopped at a red light by another vehicle that failed to brake in time.",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_4b52e625_para_b009",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\fnol\\notice_of_loss.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_8",
+            "text": "Vehicle VIN: 1HGCM82633A004352",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_4b52e625_para_b010",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\fnol\\notice_of_loss.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_9",
+            "text": "Vehicle Make/Model/Year: 2023 Honda Accord",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_4b52e625_para_b011",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\fnol\\notice_of_loss.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_10",
+            "text": "Damage Location: Rear passenger quarter panel and bumper",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_4b52e625_para_b012",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\fnol\\notice_of_loss.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_11",
+            "text": "Driver Name: Maria Gonzalez",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_4b52e625_para_b013",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\fnol\\notice_of_loss.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_12",
+            "text": "Driver License Number: IL-G4471-0293",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_4b52e625_para_b014",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\fnol\\notice_of_loss.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_13",
+            "text": "Other Party Name: Thomas Reid",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_4b52e625_para_b015",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\fnol\\notice_of_loss.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_14",
+            "text": "Other Vehicle Plate: IL-8829-JR",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_4b52e625_para_b016",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\fnol\\notice_of_loss.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_15",
+            "text": "Witness Name: Patrick Uyeda",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_4b52e625_para_b017",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\fnol\\notice_of_loss.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_16",
+            "text": "Injuries Reported: None reported at the scene.",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          },
+          {
+            "block_id": "doc_4b52e625_para_b018",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\fnol\\notice_of_loss.docx",
+            "source_format": "docx",
+            "page": null,
+            "locator": "paragraph_17",
+            "text": "Rental Needed: Yes, insured requested a rental vehicle during repairs.",
+            "bbox": null,
+            "confidence": 1.0,
+            "extraction_method": "docx_paragraph",
+            "extra": {}
+          }
+        ],
+        "warnings": [],
+        "ingested_at": "2026-07-03T06:41:21.584210Z"
+      },
+      {
+        "doc_id": "doc_e4a3671a",
+        "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\evidence\\rear_bumper_damage.jpg",
+        "source_format": "image",
+        "page_count": 1,
+        "doc_type": "unknown",
+        "blocks": [
+          {
+            "block_id": "doc_e4a3671a_img_b001",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\evidence\\rear_bumper_damage.jpg",
+            "source_format": "image",
+            "page": 1,
+            "locator": "ocr_line_1",
+            "text": "Rear bumper damage - Gonzalez claim",
+            "bbox": [
+              42.0,
+              221.0,
+              382.0,
+              248.0
+            ],
+            "confidence": 0.9433,
+            "extraction_method": "pytesseract_ocr",
+            "extra": {}
+          }
+        ],
+        "warnings": [],
+        "ingested_at": "2026-07-03T06:41:24.046344Z"
+      },
+      {
+        "doc_id": "doc_6d723c56",
+        "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\evidence\\scene_wide_shot.jpg",
+        "source_format": "image",
+        "page_count": 1,
+        "doc_type": "police_report",
+        "blocks": [
+          {
+            "block_id": "doc_6d723c56_img_b001",
+            "source_file": "C:\\Users\\shour\\AppData\\Local\\Temp\\claimlens_uploads\\CLM-aee68f05\\auto_complete_clean\\evidence\\scene_wide_shot.jpg",
+            "source_format": "image",
+            "page": 1,
+            "locator": "ocr_line_1",
+            "text": "Intersection scene, 5th Ave & Cedar St",
+            "bbox": [
+              42.0,
+              225.0,
+              376.0,
+              242.0
+            ],
+            "confidence": 0.95,
+            "extraction_method": "pytesseract_ocr",
+            "extra": {}
+          }
+        ],
+        "warnings": [],
+        "ingested_at": "2026-07-03T06:41:24.484289Z"
+      }
+    ],
+    "lob_schema": {
+      "lob": "auto",
+      "source_concept": "Field concepts inspired by ACORD 2 (Automobile Loss Notice). Our own field names/JSON structure -- not a reproduction of the ACORD form template, layout, or legal text.",
+      "mandatory_doc_types": [
+        "police_report",
+        "photos",
+        "repair_estimate",
+        "policy_declaration"
+      ],
+      "sections": [
+        {
+          "section_id": "policy_info",
+          "fields": [
+            {
+              "field_id": "policy_number",
+              "label": "Policy Number",
+              "required": true,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "policy no",
+                "policy #"
+              ]
+            },
+            {
+              "field_id": "carrier_name",
+              "label": "Carrier / NAIC Code",
+              "required": false,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "insurer",
+                "naic code"
+              ]
+            },
+            {
+              "field_id": "policy_effective_dates",
+              "label": "Policy Period",
+              "required": true,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "policy term",
+                "effective date"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": "loss_details",
+          "fields": [
+            {
+              "field_id": "date_of_loss",
+              "label": "Date of Loss",
+              "required": true,
+              "field_type": "date",
+              "description": null,
+              "synonyms": [
+                "accident date",
+                "date of accident"
+              ]
+            },
+            {
+              "field_id": "time_of_loss",
+              "label": "Time of Loss",
+              "required": false,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "accident time"
+              ]
+            },
+            {
+              "field_id": "loss_location",
+              "label": "Location of Loss",
+              "required": true,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "accident location",
+                "where did the accident occur"
+              ]
+            },
+            {
+              "field_id": "loss_description",
+              "label": "Description of Accident",
+              "required": true,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "narrative",
+                "what happened",
+                "circumstances"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": "insured_vehicle",
+          "fields": [
+            {
+              "field_id": "vehicle_vin",
+              "label": "VIN",
+              "required": true,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "vehicle identification number"
+              ]
+            },
+            {
+              "field_id": "vehicle_make_model_year",
+              "label": "Make / Model / Year",
+              "required": true,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "vehicle description"
+              ]
+            },
+            {
+              "field_id": "damage_location",
+              "label": "Where Damage Can Be Seen",
+              "required": false,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "point of impact",
+                "damage area"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": "parties",
+          "fields": [
+            {
+              "field_id": "driver_name",
+              "label": "Driver Name",
+              "required": true,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "insured driver"
+              ]
+            },
+            {
+              "field_id": "driver_license_number",
+              "label": "Driver License Number",
+              "required": false,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "license no"
+              ]
+            },
+            {
+              "field_id": "other_party_name",
+              "label": "Other Party / Driver Name",
+              "required": false,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "third party",
+                "other driver"
+              ]
+            },
+            {
+              "field_id": "other_vehicle_plate",
+              "label": "Other Vehicle Plate",
+              "required": false,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "license plate"
+              ]
+            },
+            {
+              "field_id": "witness_name",
+              "label": "Witness Name",
+              "required": false,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "witness"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": "official_records",
+          "fields": [
+            {
+              "field_id": "police_report_number",
+              "label": "Police Report Number",
+              "required": false,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "case number",
+                "report number"
+              ]
+            },
+            {
+              "field_id": "reporting_department",
+              "label": "Reporting Police Department",
+              "required": false,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "police department"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": "injury",
+          "fields": [
+            {
+              "field_id": "injuries_reported",
+              "label": "Injuries Reported",
+              "required": false,
+              "field_type": "boolean",
+              "description": null,
+              "synonyms": [
+                "bodily injury",
+                "any injuries"
+              ]
+            },
+            {
+              "field_id": "injury_description",
+              "label": "Injury Description",
+              "required": false,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "nature of injury"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": "financials",
+          "fields": [
+            {
+              "field_id": "repair_estimate_amount",
+              "label": "Repair Estimate",
+              "required": true,
+              "field_type": "number",
+              "description": null,
+              "synonyms": [
+                "estimated repair cost",
+                "estimate amount"
+              ]
+            },
+            {
+              "field_id": "rental_needed",
+              "label": "Rental Vehicle Needed",
+              "required": false,
+              "field_type": "boolean",
+              "description": null,
+              "synonyms": [
+                "rental car"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": "remarks_overflow",
+          "fields": [
+            {
+              "field_id": "additional_remarks",
+              "label": "Additional Remarks",
+              "required": false,
+              "field_type": "text",
+              "description": null,
+              "synonyms": [
+                "remarks",
+                "notes"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "extracted_fields": {
+      "policy_number": {
+        "field_id": "policy_number",
+        "value": "AUTO-7734-9021",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_998555fa_para_b002",
+          "doc_4b52e625_para_b002"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "carrier_name": {
+        "field_id": "carrier_name",
+        "value": "Meridian Mutual Insurance",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_998555fa_para_b001",
+          "doc_4b52e625_para_b003"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "policy_effective_dates": {
+        "field_id": "policy_effective_dates",
+        "value": "01/01/2026 to 01/01/2027",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_998555fa_para_b004",
+          "doc_4b52e625_para_b004"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "date_of_loss": {
+        "field_id": "date_of_loss",
+        "value": "03/14/2026",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_19ab54a1_para_b004",
+          "doc_4b52e625_para_b005"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "time_of_loss": {
+        "field_id": "time_of_loss",
+        "value": "approximately 5:45 PM",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_19ab54a1_para_b004",
+          "doc_4b52e625_para_b006"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "loss_location": {
+        "field_id": "loss_location",
+        "value": "5th Ave and Cedar St, Springfield, IL",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_19ab54a1_para_b005",
+          "doc_4b52e625_para_b007"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "loss_description": {
+        "field_id": "loss_description",
+        "value": "Vehicle 2 (Reid) failed to stop for traffic signal and struck the rear of Vehicle 1 (Gonzalez), which was stationary. Insured vehicle was struck on the rear passenger side while stopped at a red light by another vehicle that failed to brake in time.",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_19ab54a1_para_b006",
+          "doc_4b52e625_para_b008"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "vehicle_vin": {
+        "field_id": "vehicle_vin",
+        "value": "1HGCM82633A004352",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_4b52e625_para_b009"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "vehicle_make_model_year": {
+        "field_id": "vehicle_make_model_year",
+        "value": "2023 Honda Accord",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_4b52e625_para_b010"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "damage_location": {
+        "field_id": "damage_location",
+        "value": "Rear passenger quarter panel and bumper",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_4b52e625_para_b011"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "driver_name": {
+        "field_id": "driver_name",
+        "value": "Maria Gonzalez",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_4b52e625_para_b012"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "driver_license_number": {
+        "field_id": "driver_license_number",
+        "value": "IL-G4471-0293",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_4b52e625_para_b013"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "other_party_name": {
+        "field_id": "other_party_name",
+        "value": "Thomas Reid",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_4b52e625_para_b014"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "other_vehicle_plate": {
+        "field_id": "other_vehicle_plate",
+        "value": "IL-8829-JR",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_4b52e625_para_b015"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "witness_name": {
+        "field_id": "witness_name",
+        "value": "Patrick Uyeda",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_4b52e625_para_b016"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "police_report_number": {
+        "field_id": "police_report_number",
+        "value": "SPD-2026-011824",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_19ab54a1_para_b002"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "reporting_department": {
+        "field_id": "reporting_department",
+        "value": "Springfield Police Department, Traffic Division",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_19ab54a1_para_b003"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "injuries_reported": {
+        "field_id": "injuries_reported",
+        "value": "false",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_19ab54a1_para_b006",
+          "doc_4b52e625_para_b017"
+        ],
+        "status": "found",
+        "reason": "The police report and notice of loss both explicitly state that no injuries were reported."
+      },
+      "injury_description": {
+        "field_id": "injury_description",
+        "value": null,
+        "confidence": 1.0,
+        "evidence_block_ids": [],
+        "status": "missing",
+        "reason": "The documents explicitly state that no injuries were reported."
+      },
+      "repair_estimate_amount": {
+        "field_id": "repair_estimate_amount",
+        "value": "4250.00",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_f24395bb_para_b003"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "rental_needed": {
+        "field_id": "rental_needed",
+        "value": "true",
+        "confidence": 1.0,
+        "evidence_block_ids": [
+          "doc_4b52e625_para_b018"
+        ],
+        "status": "found",
+        "reason": null
+      },
+      "additional_remarks": {
+        "field_id": "additional_remarks",
+        "value": null,
+        "confidence": 0.0,
+        "evidence_block_ids": [],
+        "status": "missing",
+        "reason": "No section or field labeled 'Additional Remarks', 'remarks', or 'notes' containing supplementary information was found in the provided documents."
+      }
+    },
+    "field_verifications": {
+      "policy_number": {
+        "field_id": "policy_number",
+        "match_method": "fuzzy_text",
+        "match_score": 0.9285714285714286,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.9286,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 0.93 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "carrier_name": {
+        "field_id": "carrier_name",
+        "match_method": "fuzzy_text",
+        "match_score": 1.0,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 1.0,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 1.00 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "policy_effective_dates": {
+        "field_id": "policy_effective_dates",
+        "match_method": "fuzzy_text",
+        "match_score": 1.0,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 1.0,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 1.00 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "date_of_loss": {
+        "field_id": "date_of_loss",
+        "match_method": "exact_date",
+        "match_score": 1.0,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 1.0,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Exact date match: 2026-03-14 found in cited evidence."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "time_of_loss": {
+        "field_id": "time_of_loss",
+        "match_method": "fuzzy_text",
+        "match_score": 0.9047619047619048,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.9048,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 0.90 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "loss_location": {
+        "field_id": "loss_location",
+        "match_method": "fuzzy_text",
+        "match_score": 0.8108108108108109,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.8108,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 0.81 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "loss_description": {
+        "field_id": "loss_description",
+        "match_method": "fuzzy_text",
+        "match_score": 0.4939759036144578,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.494,
+        "risk_level": "needs_review",
+        "requires_human_review": true,
+        "reasons": [
+          "Fuzzy text similarity 0.49 (below threshold 0.6).",
+          "LLM second-opinion check confirmed support: Both cited paragraphs contain the same details about Vehicle 2 (Reid) failing to stop and striking Vehicle 1 (Gonzalez) from behind while the insured vehicle was hit on the rear passenger side at a red light."
+        ],
+        "llm_verification": {
+          "supported": true,
+          "confidence": 0.99,
+          "explanation": "Both cited paragraphs contain the same details about Vehicle 2 (Reid) failing to stop and striking Vehicle 1 (Gonzalez) from behind while the insured vehicle was hit on the rear passenger side at a red light."
+        },
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "vehicle_vin": {
+        "field_id": "vehicle_vin",
+        "match_method": "fuzzy_text",
+        "match_score": 0.723404255319149,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.7234,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 0.72 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "vehicle_make_model_year": {
+        "field_id": "vehicle_make_model_year",
+        "match_method": "fuzzy_text",
+        "match_score": 0.9411764705882353,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.9412,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 0.94 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "damage_location": {
+        "field_id": "damage_location",
+        "match_method": "fuzzy_text",
+        "match_score": 0.8210526315789474,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.8211,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 0.82 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "driver_name": {
+        "field_id": "driver_name",
+        "match_method": "fuzzy_text",
+        "match_score": 0.6829268292682927,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.6829,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 0.68 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "driver_license_number": {
+        "field_id": "driver_license_number",
+        "match_method": "fuzzy_text",
+        "match_score": 0.6153846153846154,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.6154,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 0.62 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "other_party_name": {
+        "field_id": "other_party_name",
+        "match_method": "fuzzy_text",
+        "match_score": 0.7272727272727273,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.7273,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 0.73 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "other_vehicle_plate": {
+        "field_id": "other_vehicle_plate",
+        "match_method": "fuzzy_text",
+        "match_score": 0.9,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.9,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 0.90 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "witness_name": {
+        "field_id": "witness_name",
+        "match_method": "fuzzy_text",
+        "match_score": 0.8461538461538461,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.8462,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 0.85 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "police_report_number": {
+        "field_id": "police_report_number",
+        "match_method": "fuzzy_text",
+        "match_score": 0.9333333333333333,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.9333,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 0.93 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "reporting_department": {
+        "field_id": "reporting_department",
+        "match_method": "fuzzy_text",
+        "match_score": 0.8103448275862069,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.8103,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 0.81 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "injuries_reported": {
+        "field_id": "injuries_reported",
+        "match_method": "fuzzy_text",
+        "match_score": 0.8,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.8,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Fuzzy text similarity 0.80 (meets threshold 0.6)."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "injury_description": {
+        "field_id": "injury_description",
+        "match_method": "no_evidence",
+        "match_score": 0.0,
+        "ocr_confidence_avg": 0.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.0,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Field was not found in the claim corpus. This is an optional field."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "repair_estimate_amount": {
+        "field_id": "repair_estimate_amount",
+        "match_method": "exact_numeric",
+        "match_score": 1.0,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 1.0,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Exact numeric match: 4250.00 found verbatim in cited evidence."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "rental_needed": {
+        "field_id": "rental_needed",
+        "match_method": "fuzzy_text",
+        "match_score": 0.5,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 0.5,
+        "risk_level": "needs_review",
+        "requires_human_review": true,
+        "reasons": [
+          "Fuzzy text similarity 0.50 (below threshold 0.6).",
+          "LLM second-opinion check confirmed support: The text states 'Rental Needed: Yes', which corresponds to true."
+        ],
+        "llm_verification": {
+          "supported": true,
+          "confidence": 0.99,
+          "explanation": "The text states 'Rental Needed: Yes', which corresponds to true."
+        },
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      },
+      "additional_remarks": {
+        "field_id": "additional_remarks",
+        "match_method": "no_evidence",
+        "match_score": 0.0,
+        "ocr_confidence_avg": 0.0,
+        "llm_confidence": 0.0,
+        "composite_confidence": 0.0,
+        "risk_level": "ok",
+        "requires_human_review": false,
+        "reasons": [
+          "Field was not found in the claim corpus. This is an optional field."
+        ],
+        "llm_verification": null,
+        "crop_paths": [],
+        "adjuster_source_doc_id": null
+      }
+    },
+    "missing_mandatory_docs": [
+      "photos"
+    ],
+    "triage": {
+      "tier": "needs_review",
+      "score": 43,
+      "forced_review": false,
+      "reasons": [
+        "Missing mandatory document type: 'photos'.",
+        "Description of Accident: needs review -- Fuzzy text similarity 0.49 (below threshold 0.6).",
+        "Rental Vehicle Needed: needs review -- Fuzzy text similarity 0.50 (below threshold 0.6)."
+      ],
+      "high_risk_field_ids": []
+    },
+    "created_at": "2026-07-03T06:41:21.016560Z"
+  },
+  "status": "complete",
+  "error": null,
+  "summary": "Claim CLM-aee68f05 (AUTO): 20/22 fields extracted (9/9 required fields found).\nMissing mandatory documents: photos.\nTriage verdict: NEEDS REVIEW (composite score 43).\n2 field(s) flagged for review, highest priority first:\n  - [NEEDS_REVIEW] Description of Accident = 'Vehicle 2 (Reid) failed to stop for traffic signal and struck the rear of Vehicle 1 (Gonzalez), which was stationary. Insured vehicle was struck on the rear passenger side while stopped at a red light by another vehicle that failed to brake in time.': Fuzzy text similarity 0.49 (below threshold 0.6).\n  - [NEEDS_REVIEW] Rental Vehicle Needed = 'true': Fuzzy text similarity 0.50 (below threshold 0.6).",
+  "review_queue": [
+    {
+      "claim_id": "CLM-aee68f05",
+      "field_id": "loss_description",
+      "field_label": "Description of Accident",
+      "value": "Vehicle 2 (Reid) failed to stop for traffic signal and struck the rear of Vehicle 1 (Gonzalez), which was stationary. Insured vehicle was struck on the rear passenger side while stopped at a red light by another vehicle that failed to brake in time.",
+      "risk_level": "needs_review",
+      "reasons": [
+        "Fuzzy text similarity 0.49 (below threshold 0.6).",
+        "LLM second-opinion check confirmed support: Both cited paragraphs contain the same details about Vehicle 2 (Reid) failing to stop and striking Vehicle 1 (Gonzalez) from behind while the insured vehicle was hit on the rear passenger side at a red light."
+      ],
+      "evidence_block_ids": [
+        "doc_19ab54a1_para_b006",
+        "doc_4b52e625_para_b008"
+      ],
+      "crop_paths": []
+    },
+    {
+      "claim_id": "CLM-aee68f05",
+      "field_id": "rental_needed",
+      "field_label": "Rental Vehicle Needed",
+      "value": "true",
+      "risk_level": "needs_review",
+      "reasons": [
+        "Fuzzy text similarity 0.50 (below threshold 0.6).",
+        "LLM second-opinion check confirmed support: The text states 'Rental Needed: Yes', which corresponds to true."
+      ],
+      "evidence_block_ids": [
+        "doc_4b52e625_para_b018"
+      ],
+      "crop_paths": []
+    }
+  ],
+  "review_queue_counts": {
+    "total": 2,
+    "high_risk": 0,
+    "needs_review": 2,
+    "no_visual_evidence": 2
+  },
+  "adjuster_decision": "pending",
+  "updated_at": "2026-07-03T06:42:08.676474Z"
+}

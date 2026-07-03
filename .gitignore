@@ -11,4 +11,6 @@ backend/outputs/*.json
 augraphy_cache/
 backend/outputs/**/crops/*
 backend/outputs/crops/*
-/frontend/node_modules/
+backend/outputs/claim_state.json
+frontend/node_modules/
+frontend/.vite/deps/

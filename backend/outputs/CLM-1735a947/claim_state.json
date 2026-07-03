@@ -896,11 +896,11 @@
       },
       "policy_effective_dates": {
         "field_id": "policy_effective_dates",
-        "value": null,
+        "value": "6942067",
         "confidence": 0.0,
         "evidence_block_ids": [],
-        "status": "missing",
-        "reason": "The policy effective dates or term are not mentioned in any of the provided documents."
+        "status": "found",
+        "reason": "Manually overridden by adjuster. Note: Trust me bro."
       },
       "date_of_loss": {
         "field_id": "date_of_loss",
@@ -944,11 +944,11 @@
       },
       "vehicle_vin": {
         "field_id": "vehicle_vin",
-        "value": null,
+        "value": "6969699",
         "confidence": 0.0,
         "evidence_block_ids": [],
-        "status": "missing",
-        "reason": "The VIN is not present in any of the provided documents."
+        "status": "found",
+        "reason": "Manually overridden by adjuster. Note: I made this up"
       },
       "vehicle_make_model_year": {
         "field_id": "vehicle_make_model_year",
@@ -1042,7 +1042,7 @@
           "doc_97c7fa21_p1_b008"
         ],
         "status": "found",
-        "reason": "The police report explicitly marks 'B-Minor lacerations/abrasions' under the Injuries section."
+        "reason": "Manually overridden by adjuster. Note: i dont understand where is value is comming from"
       },
       "injury_description": {
         "field_id": "injury_description",
@@ -1116,15 +1116,15 @@
       },
       "policy_effective_dates": {
         "field_id": "policy_effective_dates",
-        "match_method": "no_evidence",
-        "match_score": 0.0,
-        "ocr_confidence_avg": 0.0,
-        "llm_confidence": 0.0,
-        "composite_confidence": 0.0,
-        "risk_level": "needs_review",
-        "requires_human_review": true,
+        "match_method": "fuzzy_text",
+        "match_score": 1.0,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 1.0,
+        "risk_level": "ok",
+        "requires_human_review": false,
         "reasons": [
-          "Field was not found in the claim corpus. This is a REQUIRED field."
+          "Adjuster manually reviewed and overrode this field's value."
         ],
         "llm_verification": null,
         "crop_paths": []
@@ -1199,15 +1199,15 @@
       },
       "vehicle_vin": {
         "field_id": "vehicle_vin",
-        "match_method": "no_evidence",
-        "match_score": 0.0,
-        "ocr_confidence_avg": 0.0,
-        "llm_confidence": 0.0,
-        "composite_confidence": 0.0,
-        "risk_level": "needs_review",
-        "requires_human_review": true,
+        "match_method": "fuzzy_text",
+        "match_score": 1.0,
+        "ocr_confidence_avg": 1.0,
+        "llm_confidence": 1.0,
+        "composite_confidence": 1.0,
+        "risk_level": "ok",
+        "requires_human_review": false,
         "reasons": [
-          "Field was not found in the claim corpus. This is a REQUIRED field."
+          "Adjuster manually reviewed and overrode this field's value."
         ],
         "llm_verification": null,
         "crop_paths": []
@@ -1362,21 +1362,16 @@
       "injuries_reported": {
         "field_id": "injuries_reported",
         "match_method": "fuzzy_text",
-        "match_score": 0.5,
+        "match_score": 1.0,
         "ocr_confidence_avg": 1.0,
         "llm_confidence": 1.0,
-        "composite_confidence": 0.5,
-        "risk_level": "needs_review",
-        "requires_human_review": true,
+        "composite_confidence": 1.0,
+        "risk_level": "ok",
+        "requires_human_review": false,
         "reasons": [
-          "Fuzzy text similarity 0.50 (below threshold 0.6).",
-          "LLM second-opinion check confirmed support: The checked box indicates a minor injury, confirming injuries were reported."
+          "Adjuster manually reviewed and overrode this field's value."
         ],
-        "llm_verification": {
-          "supported": true,
-          "confidence": 0.99,
-          "explanation": "The checked box indicates a minor injury, confirming injuries were reported."
-        },
+        "llm_verification": null,
         "crop_paths": [
           "/crops/CLM-1735a947/doc_97c7fa21_p1_b008.png"
         ]
@@ -1468,55 +1463,13 @@
   "status": "complete",
   "error": null,
   "summary": "Claim CLM-1735a947 (AUTO): 14/22 fields extracted (7/9 required fields found).\nMissing mandatory documents: photos, policy_declaration.\nTriage verdict: HIGH RISK INCOMPLETE (composite score 78).\n3 field(s) flagged for review, highest priority first:\n  - [NEEDS_REVIEW] Policy Period = None: Field was not found in the claim corpus. This is a REQUIRED field.\n  - [NEEDS_REVIEW] VIN = None: Field was not found in the claim corpus. This is a REQUIRED field.\n  - [NEEDS_REVIEW] Injuries Reported = 'true': Fuzzy text similarity 0.50 (below threshold 0.6).",
-  "review_queue": [
-    {
-      "claim_id": "CLM-1735a947",
-      "field_id": "policy_effective_dates",
-      "field_label": "Policy Period",
-      "value": null,
-      "risk_level": "needs_review",
-      "reasons": [
-        "Field was not found in the claim corpus. This is a REQUIRED field."
-      ],
-      "evidence_block_ids": [],
-      "crop_paths": []
-    },
-    {
-      "claim_id": "CLM-1735a947",
-      "field_id": "vehicle_vin",
-      "field_label": "VIN",
-      "value": null,
-      "risk_level": "needs_review",
-      "reasons": [
-        "Field was not found in the claim corpus. This is a REQUIRED field."
-      ],
-      "evidence_block_ids": [],
-      "crop_paths": []
-    },
-    {
-      "claim_id": "CLM-1735a947",
-      "field_id": "injuries_reported",
-      "field_label": "Injuries Reported",
-      "value": "true",
-      "risk_level": "needs_review",
-      "reasons": [
-        "Fuzzy text similarity 0.50 (below threshold 0.6).",
-        "LLM second-opinion check confirmed support: The checked box indicates a minor injury, confirming injuries were reported."
-      ],
-      "evidence_block_ids": [
-        "doc_97c7fa21_p1_b008"
-      ],
-      "crop_paths": [
-        "/crops/CLM-1735a947/doc_97c7fa21_p1_b008.png"
-      ]
-    }
-  ],
+  "review_queue": [],
   "review_queue_counts": {
-    "total": 3,
+    "total": 0,
     "high_risk": 0,
-    "needs_review": 3,
-    "no_visual_evidence": 2
+    "needs_review": 0,
+    "no_visual_evidence": 0
   },
   "adjuster_decision": "pending",
-  "updated_at": "2026-07-02T11:19:17.146172Z"
+  "updated_at": "2026-07-02T12:11:01.259262Z"
 }

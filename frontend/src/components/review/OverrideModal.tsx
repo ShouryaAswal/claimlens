@@ -26,6 +26,7 @@ export function OverrideModal({ claim }: OverrideModalProps) {
   const { mutate, isPending, error, reset } = useOverrideField(claim.claim_id);
 
   const [value, setValue] = useState("");
+  const [sourceDocumentId, setSourceDocumentId] = useState("");
   const [note, setNote] = useState("");
 
   const fieldId = overrideModalFieldId;
@@ -37,13 +38,27 @@ export function OverrideModal({ claim }: OverrideModalProps) {
         .find((f) => f.field_id === fieldId)?.label) ||
     fieldId;
 
+  // The model's own cited evidence documents, offered first in the
+  // dropdown -- an adjuster confirming the model looked in the right
+  // place is the common case; picking a different document is the
+  // interesting signal worth surfacing prominently too.
+  const citedDocIds = new Set(
+    (field?.evidence_block_ids ?? [])
+      .map((blockId) => claim.documents.find((d) => d.blocks.some((b) => b.block_id === blockId))?.doc_id)
+      .filter((id): id is string => Boolean(id)),
+  );
+  const citedDocs = claim.documents.filter((d) => citedDocIds.has(d.doc_id));
+  const otherDocs = claim.documents.filter((d) => !citedDocIds.has(d.doc_id));
+
   useEffect(() => {
     if (fieldId && field) {
       setValue(formatValue(field.value) === "—" ? "" : String(field.value));
+      setSourceDocumentId(citedDocs[0]?.doc_id ?? "");
       setNote("");
       reset();
     }
-  }, [fieldId, field, reset]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [fieldId]);
 
   function handleOpenChange(open: boolean) {
     if (!open) closeOverrideModal();
@@ -51,9 +66,12 @@ export function OverrideModal({ claim }: OverrideModalProps) {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!fieldId || !value.trim()) return;
+    if (!fieldId || !value.trim() || !sourceDocumentId) return;
     mutate(
-      { fieldId, body: { value: value.trim(), note: note.trim() || undefined } },
+      {
+        fieldId,
+        body: { value: value.trim(), source_document_id: sourceDocumentId, note: note.trim() || undefined },
+      },
       { onSuccess: closeOverrideModal },
     );
   }
@@ -64,8 +82,11 @@ export function OverrideModal({ claim }: OverrideModalProps) {
         <DialogHeader>
           <DialogTitle>Override "{fieldLabel}"</DialogTitle>
           <DialogDescription>
-            Enter the correct value after reviewing the evidence. This is recorded as a human
-            decision and marks the field resolved -- it won't re-enter the review queue.
+            Enter the correct value after reviewing the evidence, and confirm which document you
+            found it in. This is recorded as a human decision and marks the field resolved -- it
+            won't re-enter the review queue. Where you say you found it is tracked separately from
+            what the model cited, which is exactly the signal that helps find where extraction is
+            looking in the wrong place.
           </DialogDescription>
         </DialogHeader>
 
@@ -81,6 +102,40 @@ export function OverrideModal({ claim }: OverrideModalProps) {
               placeholder="Enter the value shown in the evidence"
               autoFocus
             />
+          </div>
+
+          <div className="flex flex-col gap-1.5">
+            <label htmlFor="override-source-doc" className="text-xs font-medium text-slate-600">
+              Which document did you find this value in?
+            </label>
+            <select
+              id="override-source-doc"
+              value={sourceDocumentId}
+              onChange={(e) => setSourceDocumentId(e.target.value)}
+              className="flex h-9 w-full rounded-md border border-slate-300 bg-white px-3 py-1 text-sm text-ink-950 focus-visible:border-ink-700"
+            >
+              <option value="" disabled>
+                Select a document…
+              </option>
+              {citedDocs.length > 0 && (
+                <optgroup label="Cited by the model">
+                  {citedDocs.map((d) => (
+                    <option key={d.doc_id} value={d.doc_id}>
+                      {d.source_file.split("/").pop()}
+                    </option>
+                  ))}
+                </optgroup>
+              )}
+              {otherDocs.length > 0 && (
+                <optgroup label={citedDocs.length > 0 ? "Other documents" : "Documents"}>
+                  {otherDocs.map((d) => (
+                    <option key={d.doc_id} value={d.doc_id}>
+                      {d.source_file.split("/").pop()}
+                    </option>
+                  ))}
+                </optgroup>
+              )}
+            </select>
           </div>
 
           <div className="flex flex-col gap-1.5">
@@ -103,7 +158,7 @@ export function OverrideModal({ claim }: OverrideModalProps) {
             <Button type="button" variant="ghost" onClick={closeOverrideModal}>
               Cancel
             </Button>
-            <Button type="submit" variant="gold" disabled={isPending || !value.trim()}>
+            <Button type="submit" variant="gold" disabled={isPending || !value.trim() || !sourceDocumentId}>
               {isPending ? "Saving…" : "Save override"}
             </Button>
           </DialogFooter>

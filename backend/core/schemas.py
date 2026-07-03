@@ -121,6 +121,13 @@ class FieldVerification(BaseModel):
     reasons: list[str] = Field(default_factory=list)
     llm_verification: Optional[LLMVerificationResult] = None
     crop_paths: list[str] = Field(default_factory=list)
+    # Populated only when a human overrode this field (app/routers/review.py).
+    # doc_id the adjuster says they actually found the value in -- distinct
+    # from evidence_block_ids, which only ever reflects what the MODEL
+    # cited. Keeping the two separate is the point: a mismatch between them
+    # (model cited doc A, adjuster says doc B) is itself a signal worth
+    # mining later to find where extraction is looking in the wrong place.
+    adjuster_source_doc_id: Optional[str] = None
 
 
 class ReviewQueueItem(BaseModel):
